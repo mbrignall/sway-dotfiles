@@ -1,0 +1,13 @@
+#+title: Sway Dotfiles
+
+*   Sway on Fedora 37
+
+I decided to try Fedora 37 and Sway as this had been on my list for a while.
+Will add more to this with my findings. I wanted to replicate much of the workflow
+in Regolith.
+
+** TODO Fuzzel
+** TODO Make
+** TODO Sway
+** TODO Swaylock
+** TODO Waybar
