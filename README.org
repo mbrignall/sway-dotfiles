@@ -1,4 +1,5 @@
 #+title: Sway Dotfiles
+#+author: mbrignall
 
 *   Sway on Fedora 37
 
@@ -8,7 +9,7 @@ in Regolith.
 
 #+CAPTION: Purples and Highlights
 #+NAME:   desktop image
-[[.desktop.jpg]]
+[[.desktop.png]]
 
 ** TODO Fuzzel
 ** TODO Make
