@@ -9,7 +9,9 @@ in Regolith.
 
 #+CAPTION: Purples and Highlights
 #+NAME:   desktop image
-[[.desktop.png]]
+[[desktop.png]]
+
+![Purple and Highlights](desktop.png "Desktop View")
 
 ** TODO Fuzzel
 ** TODO Make
