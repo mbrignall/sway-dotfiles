@@ -11,8 +11,6 @@ in Regolith.
 #+NAME:   desktop image
 [[desktop.png]]
 
-![Purple and Highlights](desktop.png "Desktop View")
-
 ** TODO Fuzzel
 ** TODO Make
 ** TODO Sway
