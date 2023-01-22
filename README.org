@@ -7,9 +7,7 @@ This is my first attempt at a sway version of my regular Regolith setup. If you'
 
 Here is what it looks like:
 
-#+attr_html: :alt  :align left :class img
-[[src][title]]
-
+#+attr_html: :alt  :align left :width 300px
 [[desktop.png]]
 
 I received a test laptop from our work supplier. It's a Lenovo ThinkPad P16s. Initial boot had some issues with the laptop lid and resume (i.e. when I closed the lid the laptop screen would turn off but not wake up after suspend resumed)
