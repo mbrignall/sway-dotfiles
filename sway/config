@@ -26,6 +26,11 @@ font pango:FuraMono Nerd Font, Medium 14
 default_border none
 default_floating_border none
 
+input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
+    accel_profile "flat"
+    pointer_accel 1
+}
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -260,5 +265,5 @@ include ~/.config/sway/conf.d/*
 
 exec mako
 
-# start a terminal on workspace 2 (?)
-exec $term && sway '[app_id="emacs"]' move container to workspace 2
+# start a applications on workspaces
+exec $term && sway '[app_id="emacs"]' move container to workspace 1
