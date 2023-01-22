@@ -1,0 +1,34 @@
+#+title: sway-dotfiles
+#+author: mbrignall
+
+*   Sway on Fedora 37
+
+This is my first attempt at a sway version of my regular Regolith setup. If you've not checked out [[https://regolith-desktop.com/][Regolith]] please do so - it's i3 on Ubuntu.
+
+I received a test laptop from our work supplier. It's a Lenovo ThinkPad P16s. Initial boot had some issues with the laptop lid and resume (i.e. when I closed the lid the laptop screen would turn off but not wake up after suspend resumed)
+
+#+begin_shell
+sudo dmidecode -s bios-version
+#+end_shell
+
+If the response is less than 1.30/1.10 then I recommend upgrading.
+
+The fix for this was to [[https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-p-series-laptops/thinkpad-p16s-gen-1-type-21bt-21bu/21bt/21bt000vuk/pf3z0wnh/downloads/driver-list/component?name=BIOS%2FUEFI][update the BIOS]]. Lenovo released a new version on 22nd December 2022 which addressed this issue and some others for Linux.
+
+**   Themes
+
+I've been using Doom Emacs recently and got inspiration from a built in theme 'doom-shades-of-purple'. I've tried to link the colour and theme to all the features added below. This is very much WIP and I will continue as I test the device.
+
+*** TODO Fuzzel
+
+*** TODO [[https://github.com/emersion/mako][Mako]]
+
+Mako is an alternative to Dunst/Rofication. I use Dunst in my Regolith set up which works really well. Mako is just as cusomisable.
+
+*** TODO Sway
+
+
+
+*** TODO Swaylock
+
+*** TODO Waybar
