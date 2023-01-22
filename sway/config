@@ -12,7 +12,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term foot
+set $term emacs
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -62,7 +62,7 @@ bindsym $mod+Shift+o exec swaymsg "output * enable"
 # Power management #
 #------------------#
 
-set $mode_system System: (l)ock  | (e)xit  | (s)uspend | (h)ibernate | (r)eboot | power-(o)ff
+set $mode_system System: (l)ock  | (e)xit  | (s)uspend | (h)ibernate | (r)eboot | power-(o)ff
 
 bindsym $mod+Escape mode "$mode_system"
 
@@ -247,9 +247,9 @@ for_window [app_id="org.gnome.Calendar"] floating enable
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
-bindsym XF86AudioRaiseVolume exec
-bindsym XF86AudioLowerVolume exec
-bindsym XF86AudioMute exec
+bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
+bindsym XF86AudioLowerVolume exec amixer set Master 3%-
+bindsym XF86AudioMute exec amixer set Master toggle
 
 #include /etc/sway/config.d/*
 include ~/.config/sway/conf.d/*
@@ -261,4 +261,4 @@ include ~/.config/sway/conf.d/*
 exec mako
 
 # start a terminal on workspace 2 (?)
-exec $term && sway '[app_id="foot"]' move container to workspace 2
+exec $term && sway '[app_id="emacs"]' move container to workspace 2
