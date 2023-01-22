@@ -11,9 +11,9 @@ Here is what it looks like:
 
 I received a test laptop from our work supplier. It's a Lenovo ThinkPad P16s. Initial boot had some issues with the laptop lid and resume (i.e. when I closed the lid the laptop screen would turn off but not wake up after suspend resumed)
 
-#+begin_shell
+```
 sudo dmidecode -s bios-version
-#+end_shell
+```
 
 If the response is less than 1.30/1.10 then I recommend upgrading.
 
@@ -27,7 +27,7 @@ I've been using Doom Emacs recently and got inspiration from a built in theme 'd
 
 *** TODO [[https://github.com/emersion/mako][Mako]]
 
-Mako is an alternative to Dunst/Rofication. I use Dunst in my Regolith set up which works really well. Mako is just as cusomisable.
+Mako is an alternative to Dunst/Rofication. I use [[https://github.com/dunst-project/dunst][Dunst]] in my Regolith set up which works really well. Mako is just as cusomisable.
 
 *** TODO Sway
 
