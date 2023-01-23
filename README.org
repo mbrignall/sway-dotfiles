@@ -1,7 +1,7 @@
-#+title: sway-dotfiles
+#+title: Sway on Fedora 37
 #+author: mbrignall
 
-*   Sway on Fedora 37
+*   Crafting a desktop experience
 
 #+attr_html: :alt  :align left :class img
 [[logo.png]]
