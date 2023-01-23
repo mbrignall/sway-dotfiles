@@ -100,6 +100,8 @@ mode "$mode_system" {
     # Open Browser
     bindsym $mod+Shift+Return exec google-chrome
 
+    # Open Nautilus
+    bindsym $mod+shift+n exec nautilus
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -216,10 +218,16 @@ mode "resize" {
     bindsym $right resize grow width 10px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 20px
+    bindsym Down resize grow height 20px
+    bindsym Up resize shrink height 20px
+    bindsym Right resize grow width 20px
+
+    # More, with shift+arrow keys
+    bindsym Shift+Left resize shrink width 100px
+    bindsym Shift+Down resize grow height 100px
+    bindsym Shift+Up resize shrink height 100px
+    bindsym Shift+Right resize grow width 100px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -249,7 +257,7 @@ for_window [app_id="org.gnome.Calendar"] floating enable
 # FN Keys:
 #
 
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "brighness down 5%"
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 3%+

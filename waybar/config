@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "network", "custom/cpu_speed", "battery", "custom/weather", "custom/storage", "pulseaudio"],
+    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather", "custom/storage", "pulseaudio"],
     "sway/mode": {
         "format": " {}"
     },

@@ -1,15 +1,123 @@
-font=FuraMono Nerd Font
-background-color=#222222d0
-progress-color=#5f27cdd0
-icons=1
+# Working top to bottom from the man pages
+# https://www.mankier.com/5/mako
+
+#
+# GLOBAL CONFIGUATION OPTIONS
+#
+
+# max-history=n
+# Default: 5
+
+# sort=+/-time | +/-priority
+# Default: -time
+
+#
+# BINDING OPTIONS
+#
+
+# on-button-left=action
+# Default: invoke-default-action
+
+# on-button-middle=action
+# Default: none
+
+# on-button-right=action
+# Default: dismiss
+# on-touch=action
+# Default: dismiss
+
+# on-notify = action
+# Default: none
+
+# on-button-middle=exec makoctl menu -n "$id" dmenu -p 'Select action: '
+# on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+
+#
+# STYLE OPTIONS
+#
+
+font=FuraMono Nerd Font 14
+# Default: monospace 10
+
+background-color=#2D2B55
+# Default: #285577FF
+
+# text-color=color
+# Default: #FFFFFFFF
+
+width=250
+# Default: 300
+
+height=150
+# Default: 100
+
+# outer-margin=directional
+# Default: 0
+
+margin=5
+# Default: 10
+
 padding=20
-width=450
-border-color=#5f27cdd0
-border-size=2
-margin=10
-border-radius=6
+# Default: 5
+
+border-size=5
+# Default: 2
+
+border-color=#5f27cd
+# Default: #4C7899FF
+
+border-radius=0
+# Default: 0
+
+progress-color=over #009ddc
+# Default: over #5588AAFF
+
+icons=1
+# Default: 1
+
+# max-icon-size=px
+# Default: 64
+
 icon-path=/usr/share/icons/Yaru/
+# Default: ""
+
+# icon-location=position
+# Default: left
+
+markup=1
+# Default: 1
+
 actions=1
+# Default: 1
+
+# history=0|1
+# Default: 1
+
+# format=format
+# Default: <b>%s</b>\n%b
+# Default when grouped: (%g) <b>%s</b>\n%b
+
+text-alignment=center
+# Default: left
+
 default-timeout=3333
-# ignore-timeout=1
+# Default: 0
+
+# ignore-timeout=0|1
+# Default: 0
+
+# group-by=field[,field,...]
+# Default: none
+
+# max-visible=n
+# Default: 5
+
+# output=name
+# Default: ""
+
 layer=overlay
+# Default: top
+
+# anchor=position
+# Default: top-right
