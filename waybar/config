@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather", "custom/storage", "pulseaudio"],
+    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather", "custom/storage", "pulseaudio", "bluetooth"],
     "sway/mode": {
         "format": " {}"
     },
@@ -79,7 +79,6 @@
     },
     "pulseaudio": {
         "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
-        "format-bluetooth": "<span font='Font Awesome 5 Free 11'> {icon:2}</span> {volume:4}%",
         "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
         "format-alt-click": "click-right",
         "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
@@ -90,6 +89,12 @@
         "scroll-step": 2,
         "on-click": "gnome-control-center sound",
         "tooltip": false
+    },
+    "bluetooth": {
+    "format": "",
+    "format-off": "",
+    "on-click": "blueberry",
+    "tooltip-format": "{status}"
     },
     "custom/storage": {
         "format": "{} ",

@@ -5,7 +5,7 @@
 # GLOBAL CONFIGUATION OPTIONS
 #
 
-# max-history=n
+max-history=5
 # Default: 5
 
 # sort=+/-time | +/-priority

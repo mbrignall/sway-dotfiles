@@ -272,6 +272,7 @@ include ~/.config/sway/conf.d/*
 #
 
 exec mako
+exec blueberry
 
 # start a applications on workspaces
 exec $term && sway '[app_id="emacs"]' move container to workspace 1
