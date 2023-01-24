@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather", "custom/storage", "pulseaudio", "bluetooth"],
+    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather","pulseaudio", "bluetooth", "backlight"],
     "sway/mode": {
         "format": " {}"
     },
@@ -91,9 +91,9 @@
         "tooltip": false
     },
     "bluetooth": {
-    "format": "",
+    "format": "{icon}",
     "format-off": "",
-    "on-click": "blueberry",
+    "on-click": "blueman-manager",
     "tooltip-format": "{status}"
     },
     "custom/storage": {
@@ -109,8 +109,8 @@
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
         "format-icons": ["", ""],
-        "on-scroll-down": "light -A 1",
-        "on-scroll-up": "light -U 1"
+        "on-scroll-down": "brightnessctl set 5%-",
+        "on-scroll-up": "brightnessctl set +5%"
     },
     "temperature": {
         "format": "<span font='Font Awesome 5 Free 9'></span> {temperatureC:3}°C",
