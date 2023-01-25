@@ -48,3 +48,16 @@ Styled a bit, but more a WIP. Want to add Sway logo or something on the screen. 
 *** TODO [[https://github.com/Alexays/Waybar][Waybar]]
 
     Waybar is a really cool, sway specific equivalent to something like [[https://polybar.github.io/][Polybar]]. I really like Waybar and using CSS to style it. This is different to Polybar which feels it has a higher entry level for tweaking.
+
+*** TODO Plymouth theme
+
+    I amended the theme to remove the Fedora logo on the splash screen (spinner theme) in favour of the Sway logo:
+
+    note: You will need to check the current theme and replace anything after /themes/ below.
+
+    #+begin_sh options
+    sudo mv /usr/share/plymouth/themes/theme/currentlogo.png /usr/share/themes/theme/currentlogo.png.bac
+    sudo cp /path/to/logo.png /usr/share/plymouth/themes/theme/nameofcurrentlogo.png
+    # Then refresh the theme:
+    plymouth-set-default-theme -R theme
+    #+end_sh
