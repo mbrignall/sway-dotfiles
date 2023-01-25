@@ -46,7 +46,7 @@ background-color=#2D2B55
 # text-color=color
 # Default: #FFFFFFFF
 
-width=250
+width=300
 # Default: 300
 
 height=150

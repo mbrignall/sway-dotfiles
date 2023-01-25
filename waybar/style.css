@@ -1,13 +1,17 @@
+/* GENERAL */
+
 * {
     font-family: "FuraMono Nerd Font";
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     min-height: 22px;
 }
 
+/* BAR FEATURES */
+
 window#waybar {
     background: #2D2B55;
-    border-width: 3px;
+    border-width: 1px;
     border-color: #1E1E3F;
     border-style: solid;
     border-radius: 0px;
@@ -18,7 +22,7 @@ button.focused {
 }
 
 #workspaces {
-    border-radius: 0px 0px 0px 6px;
+    border-radius: 0px 0px 0px 0px;
     margin-left: -9px;
 }
 
@@ -73,32 +77,11 @@ button:hover {
     background-color: #2b125d;
 }
 
-
-#clock,
-#backlight,
-#battery,
-#bluetooth,
-#clock,
-#cpu,
-#custom-cpu_speed,
-#custom-mail,
-#custom-media,
-#custom-powermenu,
-#custom-spotify,
-#custom-storage,
-#custom-weather,
-#idle_inhibitor,
-#language,
-#memory,
-#mode,
-#network,
-#pulseaudio,
-#temperature,
-#tray,
-#window,
 #workspaces {
     padding: 1px 10px;
 }
+
+/* MODULES */
 
 #backlight {
     color: yellow;
@@ -160,7 +143,7 @@ button:hover {
 }
 
 #mode {
-    color: lightcoral;
+    color: #C57BDB;
 }
 
 #network {

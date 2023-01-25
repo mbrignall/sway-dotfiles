@@ -1,15 +1,16 @@
 #+title: Sway on Fedora 37
 #+author: mbrignall
 
-*   Crafting a desktop experience
+* Crafting a desktop experience
 
 #+attr_html: :alt  :align center
 [[logo.png]]
 
+** What is this all about?
 
 This is my first attempt at a sway version of my regular Regolith setup. If you've not checked out [[https://regolith-desktop.com/][Regolith]] please do so - it's i3 on Ubuntu.
 
-Here is what it looks like:
+Here is what 'my' Sway looks like:
 
 #+attr_html: :alt  :align center :width 300px
 [[desktop.png]]

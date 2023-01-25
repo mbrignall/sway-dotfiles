@@ -12,12 +12,12 @@
         "disable-markup": false,
         "format": "{icon}",
         "format-icons": {
-            "1": "1 <span font='Font Awesome 5 Free 11'> </span>",
-            "2": "2 <span font='Font Awesome 5 Free 11'> </span>",
-            "3": "3 <span font='Font Awesome 5 Free 11'> </span>",
-            "4": "4 <span font='Font Awesome 5 Free 11'> </span>",
-            "5": "5 <span font='Font Awesome 5 Free 11'> </span>",
-            "6": "6 <span font='Font Awesome 5 Free 11'> </span>"
+            "1": " 1 <span font='Font Awesome 5 Free 11'> </span>",
+            "2": " 2 <span font='Font Awesome 5 Free 11'> </span>",
+            "3": " 3 <span font='Font Awesome 5 Free 11'> </span>",
+            "4": " 4 <span font='Font Awesome 5 Free 11'> </span>",
+            "5": " 5 <span font='Font Awesome 5 Free 11'> </span>",
+            "6": " 6 <span font='Font Awesome 5 Free 11'> </span>"
         }
     },
     "sway/window": {
@@ -36,7 +36,7 @@
         "interval": 10,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/cpu_speed.sh",
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {}",
+        "format": " <span font='Font Awesome 5 Free 11'>{icon}</span>  {} ",
         "format-icons": [""],
         "escape": true,
         "on-click": "foot -e htop"
@@ -54,11 +54,11 @@
 		"exec-if": "pgrep wf-recorder"
 	},
     "battery": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format": " <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% {time} ",
         "format-icons": ["", "", "", "", ""],
         "format-time": "{H}h{M}m",
-        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
-        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "format-charging": " <span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% {time} ",
+        "format-full": " <span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged ",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -68,20 +68,20 @@
         "on-click": "gnome-power-statistics"
     },
     "network": {
-        "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format": " {icon} ",
+        "format-alt": " {ipaddr}/{cidr} {icon} ",
         "format-alt-click": "click-right",
-        "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
+        "format-wifi": " <span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%) ",
         "format-ethernet": " {ifname}",
         "format-disconnected": "⚠ Disconnected",
         "on-click": "gnome-control-center wifi",
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
-        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
+        "format": " <span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}% ",
+        "format-alt": " <span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}% ",
         "format-alt-click": "click-right",
-        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
+        "format-muted": " <span font='Font Awesome 5 Free 11'></span> ",
         "format-icons": {
             "headphone": [" ", " ", " ", " "],
             "default": ["", "", "", ""]
@@ -91,8 +91,8 @@
         "tooltip": false
     },
     "bluetooth": {
-    "format": "{icon}",
-    "format-off": "",
+    "format": "  ",
+    "format-off": "  ",
     "on-click": "blueman-manager",
     "tooltip-format": "{status}"
     },
@@ -105,10 +105,10 @@
         "exec": "~/.config/waybar/modules/storage.sh"
     },
     "backlight": {
-        "format": "{icon}",
+        "format": "{ icon }",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": ["", ""],
+        "format-icons": ["  ", "  "],
         "on-scroll-down": "brightnessctl set 5%-",
         "on-scroll-up": "brightnessctl set +5%"
     },
