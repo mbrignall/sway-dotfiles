@@ -44,9 +44,9 @@ I've been using Doom Emacs recently and got inspiration from a built in theme 'd
 
 *** TODO [[https://codeberg.org/dnkl/fuzzel][Fuzzel]]
 
-[[img/fuzzel.png
-]]
-Fuzzel does what it needs to do and is styled like the rest of the theme using the colors of shades-of-purple.
+[[img/fuzzel.png]]
+
+Fuzzel does what it needs to do and is styled like the rest of the theme using the colors of shades-of-purple. Fuzzel seems really easy to configure.
 
 *** TODO [[https://github.com/emersion/mako][Mako]]
 
