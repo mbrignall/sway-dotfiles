@@ -3,7 +3,7 @@
 
 * Crafting a desktop experience
 
-#+attr_html: :alt  :align center
+#+ATTR_HTML: :align center
 [[img/logo.png]]
 
 ** What is this all about?
@@ -12,7 +12,7 @@ This is my first attempt at a sway version of my regular Regolith setup. If you'
 
 Here is what 'my' Sway looks like:
 
-#+attr_html: :alt  :align center :width 300px
+#+ATTR_HTML: :align center :width 300px
 [[img/desktop.png]]
 
 I received a test laptop from our work supplier. It's a Lenovo ThinkPad P16s. Initial boot had some issues with the laptop lid and resume (i.e. when I closed the lid the laptop screen would turn off but not wake up after suspend resumed)
@@ -44,6 +44,7 @@ I've been using Doom Emacs recently and got inspiration from a built in theme 'd
 
 *** TODO [[https://codeberg.org/dnkl/fuzzel][Fuzzel]]
 
+#+ATTR_HTML: :align center
 [[img/fuzzel.png]]
 
 Fuzzel does what it needs to do and is styled like the rest of the theme using the colors of shades-of-purple. Fuzzel seems really easy to configure.
@@ -62,6 +63,7 @@ Styled a bit, but more a WIP. Want to add Sway logo or something on the screen. 
 
 *** TODO [[https://github.com/Alexays/Waybar][Waybar]]
 
+#+ATTR_HTML: :align center
 [[img/waybar.png]]
 
 Waybar is a really cool, sway specific equivalent to something like [[https://polybar.github.io/][Polybar]]. I really like Waybar and using CSS to style it. This is different to Polybar which feels it has a higher entry level for tweaking.
