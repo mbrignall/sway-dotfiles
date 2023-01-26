@@ -44,7 +44,7 @@ I've been using Doom Emacs recently and got inspiration from a built in theme 'd
 
 *** TODO [[https://codeberg.org/dnkl/fuzzel][Fuzzel]]
 
-[[img/fuzzel
+[[img/fuzzel.png
 ]]
 Fuzzel does what it needs to do and is styled like the rest of the theme using the colors of shades-of-purple.
 
@@ -62,7 +62,7 @@ Styled a bit, but more a WIP. Want to add Sway logo or something on the screen. 
 
 *** TODO [[https://github.com/Alexays/Waybar][Waybar]]
 
-[[img/waybar]]
+[[img/waybar.png]]
 
 Waybar is a really cool, sway specific equivalent to something like [[https://polybar.github.io/][Polybar]]. I really like Waybar and using CSS to style it. This is different to Polybar which feels it has a higher entry level for tweaking.
 
