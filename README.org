@@ -58,6 +58,7 @@ Styled a bit, but more a WIP. Want to add Sway logo or something on the screen. 
     #+begin_src
     sudo mv /usr/share/plymouth/themes/theme/currentlogo.png /usr/share/themes/theme/currentlogo.png.bac
     sudo cp /path/to/logo.png /usr/share/plymouth/themes/theme/nameofcurrentlogo.png
+
     # Then refresh the theme:
     plymouth-set-default-theme -R theme
     #+end_src
