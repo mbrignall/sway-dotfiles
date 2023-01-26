@@ -27,7 +27,7 @@ The fix for this was to [[https://pcsupport.lenovo.com/us/en/products/laptops-an
 
 Installed packages by myself are stored in the installed.txt file.
 
-A weird thing happened with Chrome when I installed it, is that I could not use file browser (Nautilus) to 'save as' on images for exmaple. I had to go to the chrome://flags/ and search Ozone and change the platform to Wayland. Firefox however operated as expected.
+A weird thing happened with Chrome when I installed it, is that I could not use file browser (Nautilus) to 'save as' on images for example. I had to go to the chrome://flags/ and search Ozone and change the platform to Wayland. Firefox however operated as expected.
 
 *3 things* in personally need in a desktop experience:
 
