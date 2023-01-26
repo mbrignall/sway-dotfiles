@@ -93,7 +93,7 @@
     "bluetooth": {
     "format": "  ",
     "format-off": "  ",
-    "on-click": "blueman-manager",
+    "on-click": "blueberry",
     "tooltip-format": "{status}"
     },
     "custom/storage": {

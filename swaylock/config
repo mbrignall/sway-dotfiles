@@ -1,23 +1,28 @@
-ignore-empty-password
-font=FuraMono Nerd Font
 
+# FLAGS
+daemonize
+disable-caps-lock-text
+effect-greyscale
+ignore-empty-password
+indicator
+indicator-caps-lock
+screenshots
+
+# CLOCK SETTINGS
 clock
 timestr=%R
 datestr=%a, %e %B
 
-screenshots
+# FADE TIME AND BACKGROUND EFFECTS
+fade-in=1
+effect-blur=10x10
+effect-scale=0.2
 
-fade-in=0.3
-
-effect-blur=20x2
-#effect-greyscale
-effect-scale=0.9
-
-indicator
+# INDICATOR SETTINGS
 indicator-radius=200
 indicator-thickness=25
-indicator-caps-lock
 
+# COLOURS AND FONT
 key-hl-color=8800ff88
 
 separator-color=8800ff88
@@ -35,17 +40,18 @@ ring-ver-color=231f20D9
 ring-wrong-color=231f20D9
 
 line-color=8800ff88
-line-clear-color=ffd204FF
+line-clear-color=8800ff88
 line-caps-lock-color=009ddcFF
 line-ver-color=d9d8d8FF
 line-wrong-color=ee2e24FF
 
-text-clear-color=ffd20400
+font=FuraMono Nerd Font
+text-color=2d2b55
+text-clear-color=2d2b55
 text-ver-color=d9d8d800
 text-wrong-color=ee2e2400
 
 bs-hl-color=ee2e24FF
 caps-lock-key-hl-color=ffd204FF
 caps-lock-bs-hl-color=ee2e24FF
-disable-caps-lock-text
 text-caps-lock-color=009ddc

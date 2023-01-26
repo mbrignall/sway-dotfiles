@@ -20,7 +20,7 @@ set $term emacs
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu "fuzzel"
 
-font pango:FuraMono Nerd Font, Medium 14
+font pango:FuraMono Nerd Font
 
 # Remove borders
 default_border none
@@ -69,11 +69,11 @@ bindsym $mod+Shift+o exec swaymsg "output * enable"
 
 set $mode_system System: (l)ock  | (e)xit  | (s)uspend | (h)ibernate | (r)eboot | power-(o)ff
 
-bindsym $mod+Escape mode "$mode_system"
+bindsym $mod+Shift+e mode "$mode_system"
 
 mode "$mode_system" {
-	bindsym l exec swaylock, mode "default"
-	bindsym e exit
+	bindsym l exec swaylock && swayidle, mode "default"
+	bindsym e exec loginctl terminate-session self
 	bindsym s exec swaylock -f && systemctl suspend, mode "default"
 	bindsym h exec swaylock -f && systemctl hibernate, mode "default"
 	bindsym r exec systemctl reboot
@@ -114,7 +114,7 @@ mode "$mode_system" {
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -252,6 +252,10 @@ bar {
 
 for_window [app_id="org.gnome.Settings"] floating enable
 for_window [app_id="org.gnome.Calendar"] floating enable
+for_window [app_id="org.gnome.Weather"] floating enable
+for_window [app_id="org.gnome.Nautilus"] floating enable
+for_window [app_id="gnome-power-statistics"] floating enable
+for_window [app_id="blueberry"] floating enable
 
 #
 # FN Keys:
@@ -272,7 +276,6 @@ include ~/.config/sway/conf.d/*
 #
 
 exec mako
-exec blueberry
 
 # start a applications on workspaces
 exec $term && sway '[app_id="emacs"]' move container to workspace 1

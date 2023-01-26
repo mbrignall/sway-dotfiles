@@ -14,7 +14,7 @@ bindsym alt+Print exec grimshot --notify copy active
 bindsym $mod+alt+Print exec grimshot --notify save active
 
 # Region-select-screenshot to clipboard
-bindsym ctrl+Print exec grimshot --notify copy area
+bindsym $mod+ctrl+p exec grimshot --notify copy area
 
 # Region-select-screenshot to file
-bindsym $mod+ctrl+Print exec grimshot --notify save area
+bindsym $mod+ctrl+p exec grimshot --notify save area
