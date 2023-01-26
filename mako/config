@@ -37,7 +37,7 @@ max-history=5
 # STYLE OPTIONS
 #
 
-font=FuraMono Nerd Font 14
+font=FuraMono Nerd Font 12
 # Default: monospace 10
 
 background-color=#2D2B55
@@ -58,10 +58,10 @@ height=150
 margin=5
 # Default: 10
 
-padding=20
+padding=10
 # Default: 5
 
-border-size=5
+border-size=1
 # Default: 2
 
 border-color=#5f27cd
@@ -98,7 +98,7 @@ actions=1
 # Default: <b>%s</b>\n%b
 # Default when grouped: (%g) <b>%s</b>\n%b
 
-text-alignment=center
+text-alignment=left
 # Default: left
 
 default-timeout=3333
@@ -110,7 +110,7 @@ default-timeout=3333
 # group-by=field[,field,...]
 # Default: none
 
-# max-visible=n
+max-visible=3
 # Default: 5
 
 # output=name

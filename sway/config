@@ -35,11 +35,8 @@ input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/f37/default/f37-01-night.png fill
-#
-# Example configuration:
-#
-output eDP-1 pos 0 0 res 2560x1600
-output DP-6 pos 2560 0 res 2560x1440
+
+bindsym $mod+d exec wdisplays
 
 #set $laptop eDP-1
 #bindswitch --reload --locked lid:on output $laptop disable
@@ -256,6 +253,7 @@ for_window [app_id="org.gnome.Weather"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="gnome-power-statistics"] floating enable
 for_window [app_id="blueberry"] floating enable
+for_window [app_id="wdisplay"] floating enable
 
 #
 # FN Keys:
