@@ -253,14 +253,14 @@ for_window [app_id="org.gnome.Weather"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [app_id="gnome-power-statistics"] floating enable
 for_window [app_id="blueberry"] floating enable
-for_window [app_id="wdisplay"] floating enable
+for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
 
 #
 # FN Keys:
 #
 
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "brighness down 5%"
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
+bindsym XF86MonBrightnessUp exec brightnessctl set +5% && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
 bindsym XF86AudioLowerVolume exec amixer set Master 3%-
@@ -277,3 +277,27 @@ exec mako
 
 # start a applications on workspaces
 exec $term && sway '[app_id="emacs"]' move container to workspace 1
+
+# Screenshots!
+#
+
+# Current display to clipboard
+bindsym Print exec grimshot --notify copy output
+
+# Current display to file
+bindsym $mod+Print exec grimshot --notify save output
+
+# All displays to file
+bindsym ctrl+alt+Print exec grimshot --notify save
+
+# Current window to clipboard
+bindsym alt+Print exec grimshot --notify copy active
+
+# Current window to file
+bindsym $mod+alt+Print exec grimshot --notify save active
+
+# Region-select-screenshot to clipboard
+bindsym $mod+ctrl+p exec grim -g "$(slurp)" - | swappy -f -
+
+# Region-select-screenshot to file
+bindsym $mod+p exec grimshot --notify copy area
