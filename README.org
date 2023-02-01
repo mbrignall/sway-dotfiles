@@ -1,5 +1,6 @@
 #+title: Sway on Fedora 37
 #+author: mbrignall
+#+options:   toc:2
 
 * Crafting a desktop experience
 
@@ -35,6 +36,7 @@ A weird thing happened with Chrome when I installed it, is that I could not use 
  - Bluetooth and audio input/output management
  - Ability to logically navigate windows with keybindings
  - Lock screen and normal idle/suspend behaviour must be present
+ - Screenshot (grim) and edit (slurp)
  - [TODO] More to come on this...
 
 
@@ -53,6 +55,7 @@ Fuzzel does what it needs to do and is styled like the rest of the theme using t
 
 Mako is an alternative to Dunst/Rofication. I use [[https://github.com/dunst-project/dunst][Dunst]] in my Regolith set up which works really well. Mako is just as cusomisable. I amended my config file to include all the parameters from the man page so I can build it out in time. Keen to explore the menu option.
 
+*** TODO Grim and Slurp
 *** TODO [[https://swaywm.org/][Sway]]
 
 Added many Regolith keybindings and some more nice to haves - like switch to window resize (mod+r) and arrows for resize plus hold shift for a bigger jump.
