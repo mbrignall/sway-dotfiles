@@ -14,7 +14,7 @@ window#waybar {
     border-width: 1px;
     border-color: #1E1E3F;
     border-style: solid;
-    border-radius: 0px;
+    border-radius: 15px;
 }
 
 button.focused {
@@ -22,12 +22,12 @@ button.focused {
 }
 
 #workspaces {
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
     margin-left: -9px;
 }
 
 #workspaces button:nth-child(1) .visible {
-    border-radius: 0px 0px 0px 6px;
+    border-radius: 15px 15px 15px 6px;
 }
 
 #workspaces button {
@@ -57,19 +57,19 @@ button:hover {
     background-color: #2b125d;
     border-radius: 0;
     box-shadow: none;
-    border-width: 0px;
+    border-width: 15px;
 }
 
 #workspaces button.focused.current_output {
     color: #ffffff;
     background-color: #5f27cd;
-    border-radius: 0px;
+    border-radius: 15px;
 }
 
 #workspaces button.urgent {
     color: #6d4774;
     background-color: #7bc275;
-    border-radius: 0px;
+    border-radius: 15px;
 }
 
 #workspaces button.focused:hover {

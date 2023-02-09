@@ -61,13 +61,13 @@ margin=5
 padding=10
 # Default: 5
 
-border-size=1
+border-size=2
 # Default: 2
 
 border-color=#5f27cd
 # Default: #4C7899FF
 
-border-radius=0
+border-radius=15
 # Default: 0
 
 progress-color=over #009ddc
