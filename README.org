@@ -37,6 +37,10 @@ A weird thing happened with Chrome when I installed it, is that I could not use 
  - Ability to logically navigate windows with keybindings
  - Lock screen and normal idle/suspend behaviour must be present
  - Screenshot (grim) and edit (swappy/slurp)
+
+   Updated: 16/03/23 - it's been a while since I did anything on here.
+ - Added script to symbolically link folders back to the repo folder (it can be used without editing)
+ - Some more CSS adjustments, kinda moved away from the initial waybar layout and included a wallpaper I preferred
  - [TODO] More to come on this...
 
 
@@ -55,6 +59,8 @@ Fuzzel does what it needs to do and is styled like the rest of the theme using t
 
 Mako is an alternative to Dunst/Rofication. I use [[https://github.com/dunst-project/dunst][Dunst]] in my Regolith set up which works really well. Mako is just as cusomisable. I amended my config file to include all the parameters from the man page so I can build it out in time. Keen to explore the menu option.
 
+- next up add notifications for low battery!!
+
 *** TODO [[https://github.com/emersion/grim][Grim]] and [[https://github.com/jtheoof/swappy][Slurp/Swappy]]
 
 I use screengrab and area grabs a lot. Some I just need to go straight to clipboard and others I want to add context with an editor.
@@ -65,7 +71,7 @@ Added many Regolith keybindings and some more nice to haves - like switch to win
 
 *** TODO [[https://github.com/swaywm/swaylock][Swaylock]]
 
-Styled a bit, but more a WIP. Want to add Sway logo or something on the screen. At the moment it just blurrs and has a themed purple log in ring.
+Styled a bit, but more a WIP. Note: Gave up on swaylock-effects as I found it was crashing if I plugged external monitors in whilst locked. This didn't seem like a great idea so I've now changed back to the swaylock in installed with dnf.
 
 *** TODO [[https://github.com/Alexays/Waybar][Waybar]]
 
