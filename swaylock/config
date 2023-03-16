@@ -2,7 +2,6 @@
 # FLAGS
 daemonize
 disable-caps-lock-text
-effect-greyscale
 ignore-empty-password
 indicator
 indicator-caps-lock
@@ -14,9 +13,10 @@ timestr=%R
 datestr=%a, %e %B
 
 # FADE TIME AND BACKGROUND EFFECTS
-fade-in=1
-effect-blur=10x10
-effect-scale=0.2
+fade-in=0.1
+effect-blur=7x3
+effect-scale=0.5
+effect-vignette=0.5:0.5
 
 # INDICATOR SETTINGS
 indicator-radius=200

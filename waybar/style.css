@@ -2,19 +2,20 @@
 
 * {
     font-family: "FuraMono Nerd Font";
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
-    min-height: 22px;
+    min-height: 15px;
+    margin-right: 2px;
+    margin-left: 2px;
+
 }
 
 /* BAR FEATURES */
 
 window#waybar {
-    background: #2D2B55;
-    border-width: 1px;
-    border-color: #1E1E3F;
-    border-style: solid;
-    border-radius: 15px;
+    background: transparent;
+    opacity: 0.8;
+
 }
 
 button.focused {
@@ -22,18 +23,20 @@ button.focused {
 }
 
 #workspaces {
-    border-radius: 10px 10px 10px 10px;
-    margin-left: -9px;
+    border-style: solid;
+    background: #2D2B55;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #1EF4F6;
 }
 
 #workspaces button:nth-child(1) .visible {
-    border-radius: 15px 15px 15px 6px;
+    border-radius: 15px 15px 15px 15px;
 }
 
 #workspaces button {
-    padding: 5px 15px 5px 10px;
+    padding: 0px 5px 0px 5px;
     color: #bbc2cf;
-    margin: 1px 0;
 }
 
 button:hover,
@@ -43,19 +46,17 @@ button:hover,
 
 button {
     border: 0px;
-    margin: 2px 0;
 }
 
 button:hover {
     border-radius: 0;
-    box-shadow: none;
     border-width: 0px;
 }
 
 #workspaces button.visible {
     color: #bbc2cf;
     background-color: #2b125d;
-    border-radius: 0;
+    border-radius: 15px;
     box-shadow: none;
     border-width: 15px;
 }
@@ -73,12 +74,11 @@ button:hover {
 }
 
 #workspaces button.focused:hover {
-    color: white;
     background-color: #2b125d;
 }
 
 #workspaces {
-    padding: 1px 10px;
+    padding: 1px;
 }
 
 /* MODULES */
@@ -87,32 +87,66 @@ button:hover {
     color: yellow;
 }
 #battery {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    padding: 0px 5px 0px 5px;
     color: #bbc2cf;
 }
 
 #battery.charging {
+    background: #2D2B55;
+    border-radius: 15px;
     color: #7bc275;
 }
 
 #battery.warning:not(.charging) {
+    background: #2D2B55;
+    border-radius: 15px;
     background-color: #2a2e38;
     color: #FCCE7B;
 }
 
 #bluetooth {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    padding: 0px 5px 0px 5px;
     color: #c9545d;
 }
 
 #clock {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    padding: 0px 5px 0px 5px;
     color: #4db5bd;
 }
 
 #custom-cpu_speed {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
     color: #C57BDB;
-    border-radius: 0px 0px 0px 0px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 15px;
 }
 
 #pulseaudio {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    padding: 0px 5px 0px 5px;
     color: #4db5bd;
 }
 
@@ -131,10 +165,22 @@ button:hover {
 }
 
 #custom-weather {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
     color: lightcoral;
+    padding: 0px 5px 0px 5px;
 }
 
 #temperature {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    padding: 5px 5px 5px 5px;
     color: lightpink;
 }
 
@@ -147,5 +193,11 @@ button:hover {
 }
 
 #network {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    padding: 0px 5px 0px 5px;
     color: #7bc275;
 }

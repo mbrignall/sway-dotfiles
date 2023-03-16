@@ -43,7 +43,7 @@ font=FuraMono Nerd Font 12
 background-color=#2D2B55
 # Default: #285577FF
 
-# text-color=color
+text-color=#5CAAC1
 # Default: #FFFFFFFF
 
 width=300
@@ -58,13 +58,13 @@ height=150
 margin=5
 # Default: 10
 
-padding=10
+padding=7
 # Default: 5
 
 border-size=2
 # Default: 2
 
-border-color=#5f27cd
+border-color=#22F8FB
 # Default: #4C7899FF
 
 border-radius=15

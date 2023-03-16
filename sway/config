@@ -12,7 +12,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term emacs
+set $term alacritty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -20,7 +20,7 @@ set $term emacs
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu "fuzzel"
 
-font pango:FuraMono Nerd Font
+font pango:"FuraMono Nerd Font" Regular 12
 
 # Remove borders
 default_border none
@@ -34,7 +34,11 @@ input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/f37/default/f37-01-night.png fill
+output * bg /usr/share/backgrounds/wallpaper3.jpg fill
+
+output eDP1 pos 2560 1440 res 2560x1600
+output DP-5 pos 0 0 res 2560x1440
+output DP-6 pos 2560 0 res 2560x1440
 
 bindsym $mod+d exec wdisplays
 
@@ -276,7 +280,9 @@ include ~/.config/sway/conf.d/*
 exec mako
 
 # start a applications on workspaces
-exec $term && sway '[app_id="emacs"]' move container to workspace 1
+exec $term && sway && slack move container to workspace 1
+exec emacs
+exec xclock -tiecolor purple
 
 # Screenshots!
 #

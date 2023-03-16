@@ -1,23 +1,18 @@
 {
     "layer": "top",
     "position": "top",
+    "gtk-layer-shell": true,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather","pulseaudio", "bluetooth", "backlight"],
+    "modules-center": ["clock", "idle_inhibitor"],
+    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather","pulseaudio", "bluetooth"],
     "sway/mode": {
         "format": " {}"
     },
     "sway/workspaces": {
-        "disable-scroll": true,
-        "disable-markup": false,
         "format": "{icon}",
+        "all-outputs": true,
         "format-icons": {
-            "1": " 1 <span font='Font Awesome 5 Free 11'> </span>",
-            "2": " 2 <span font='Font Awesome 5 Free 11'> </span>",
-            "3": " 3 <span font='Font Awesome 5 Free 11'> </span>",
-            "4": " 4 <span font='Font Awesome 5 Free 11'> </span>",
-            "5": " 5 <span font='Font Awesome 5 Free 11'> </span>",
-            "6": " 6 <span font='Font Awesome 5 Free 11'> </span>"
+            "default": "  ",
         }
     },
     "sway/window": {
@@ -25,7 +20,7 @@
         "tooltip": false
     },
     "clock": {
-        "format": "{:%a %d %b - %H:%M}",
+        "format": " {:%a %d %b - %H:%M} ",
         "on-click": "gnome-calendar"
     },
     "sway/mode": {
@@ -39,20 +34,8 @@
         "format": " <span font='Font Awesome 5 Free 11'>{icon}</span>  {} ",
         "format-icons": [""],
         "escape": true,
-        "on-click": "foot -e htop"
+        "on-click": "alacritty -e htop"
     },
-    "sway/language": {
-        "format": "<span font='Font Awesome 5 Free 9'>🏳️</span> {}",
-        "tooltip-format": "{long}",
-        "on-click": "swaymsg input 'type:keyboard' xkb_switch_layout next"
-    },
-    "custom/recorder": {
-		"format": "",
-		"return-type": "json",
-		"interval": 4,
-		"exec": "echo '{\"class\": \"recording\"}'",
-		"exec-if": "pgrep wf-recorder"
-	},
     "battery": {
         "format": " <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% {time} ",
         "format-icons": ["", "", "", "", ""],
@@ -104,21 +87,8 @@
         "interval": 60,
         "exec": "~/.config/waybar/modules/storage.sh"
     },
-    "backlight": {
-        "format": "{ icon }",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": ["  ", "  "],
-        "on-scroll-down": "brightnessctl set 5%-",
-        "on-scroll-up": "brightnessctl set +5%"
-    },
-    "temperature": {
-        "format": "<span font='Font Awesome 5 Free 9'></span> {temperatureC:3}°C",
-        "hwmon-path": "/sys/class/thermal/thermal_zone10/temp",
-        "on-click": "foot -e 'watch -n1 sensors'"
-    },
     "custom/weather": {
-        "format": "{}",
+        "format": " {} ",
         "format-alt": "{alt}: {}",
         "format-alt-click": "click-right",
         "interval": 1800,
