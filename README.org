@@ -69,6 +69,22 @@ I use screengrab and area grabs a lot. Some I just need to go straight to clipbo
 
 Added many Regolith keybindings and some more nice to haves - like switch to window resize (mod+r) and arrows for resize plus hold shift for a bigger jump.
 
+#+begin_src shell
+input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
+    accel_profile "adaptive"
+    pointer_accel 0.80
+}
+
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+bindgesture swipe:up exec $term
+#+end_src
+
+Was keen to add some config to the touchpad of the Thinkpad. Amended sensitivity using adaptive and accel value. The bindgesture is a new feature in Sway apparently.
+
+- Swipe right/left: Workspace switch
+- Swipe up: launch terminal
+
 *** TODO [[https://github.com/swaywm/swaylock][Swaylock]]
 
 Styled a bit, but more a WIP. Note: Gave up on swaylock-effects as I found it was crashing if I plugged external monitors in whilst locked. This didn't seem like a great idea so I've now changed back to the swaylock in installed with dnf.
