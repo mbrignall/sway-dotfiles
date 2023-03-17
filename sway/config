@@ -1,4 +1,6 @@
-# My config for Sway 20/01/23
+# My config for Sway 16/03/23
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Variables
 #

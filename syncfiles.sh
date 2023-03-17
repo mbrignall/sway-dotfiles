@@ -23,13 +23,20 @@ echo ""
 read -p "Do you want to continue? (y/n) " answer
 
 if [ "$answer" != "${answer#[Yy]}" ]; then
-    # Create directories if they don't exist
+    # Remove directories if they already exist
     for folder in "${folders[@]}"
     do
-        if [ ! -d "$HOME/.config/$folder" ]; then
-            mkdir -p "$HOME/.config/$folder"
-            echo "Created directory $HOME/.config/$folder"
+        if [ -d "$HOME/.config/$folder" ]; then
+            rm -rf "$HOME/.config/$folder"
+            echo "Removed directory $HOME/.config/$folder"
         fi
+    done
+
+    # Create directories
+    for folder in "${folders[@]}"
+    do
+        mkdir -p "$HOME/.config/$folder"
+        echo "Created directory $HOME/.config/$folder"
     done
 
     # Symlink config files to the corresponding directories

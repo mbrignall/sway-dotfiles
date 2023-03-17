@@ -26,7 +26,7 @@ If the response is less than 1.30/1.10 then I recommend upgrading.
 
 The fix for this was to [[https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-p-series-laptops/thinkpad-p16s-gen-1-type-21bt-21bu/21bt/21bt000vuk/pf3z0wnh/downloads/driver-list/component?name=BIOS%2FUEFI][update the BIOS]]. Lenovo released a new version on 22nd December 2022 which addressed this issue and some others for Linux.
 
-Installed packages by myself are stored in the [[installed.txt]] file.
+Installed packages by myself are stored in the [[./installed.txt]] file.
 
 A weird thing happened with Chrome when I installed it, is that I could not use file browser (Nautilus) to 'save as' on images for example. I had to go to the chrome://flags/ and search Ozone and change the platform to Wayland. Firefox however operated as expected.
 
@@ -59,7 +59,14 @@ Fuzzel does what it needs to do and is styled like the rest of the theme using t
 
 Mako is an alternative to Dunst/Rofication. I use [[https://github.com/dunst-project/dunst][Dunst]] in my Regolith set up which works really well. Mako is just as cusomisable. I amended my config file to include all the parameters from the man page so I can build it out in time. Keen to explore the menu option.
 
-- next up add notifications for low battery!!
+ - added battery notification for low and critical:
+
+#+begin_src
+"states": {
+    "warning": 15,
+    "critical": 5
+}
+#+end_src
 
 *** [[https://github.com/emersion/grim][Grim]] and [[https://github.com/jtheoof/swappy][Slurp/Swappy]]
 
