@@ -38,7 +38,7 @@ A weird thing happened with Chrome when I installed it, is that I could not use 
  - Lock screen and normal idle/suspend behaviour must be present
  - Screenshot (grim) and edit (swappy/slurp)
 
-   Updated: 16/03/23 - it's been a while since I did anything on here.
+   /*Updated: 16/03/23* - it's been a while since I did anything on here./
  - Added script to symbolically link folders back to the repo folder (it can be used without editing)
  - Some more CSS adjustments, kinda moved away from the initial waybar layout and included a wallpaper I preferred
  - [TODO] More to come on this...
