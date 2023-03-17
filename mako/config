@@ -1,19 +1,12 @@
-# Working top to bottom from the man pages
-# https://www.mankier.com/5/mako
+# GLOBAL CONFIGURATION OPTIONS
 
-#
-# GLOBAL CONFIGUATION OPTIONS
-#
-
-max-history=5
-# Default: 5
+max-history=5    # Default: 5
 
 # sort=+/-time | +/-priority
 # Default: -time
 
-#
+
 # BINDING OPTIONS
-#
 
 # on-button-left=action
 # Default: invoke-default-action
@@ -23,101 +16,54 @@ max-history=5
 
 # on-button-right=action
 # Default: dismiss
+
 # on-touch=action
 # Default: dismiss
 
-# on-notify = action
+# on-notify=action
 # Default: none
 
 # on-button-middle=exec makoctl menu -n "$id" dmenu -p 'Select action: '
 # on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 
-#
 # STYLE OPTIONS
-#
 
-font=FuraMono Nerd Font 12
-# Default: monospace 10
-
-background-color=#2D2B55
-# Default: #285577FF
-
-text-color=#5CAAC1
-# Default: #FFFFFFFF
-
-width=300
-# Default: 300
-
-height=150
-# Default: 100
-
+font=FuraMono Nerd Font 10    # Default: monospace 10
+background-color=#2D2B55    # Default: #285577FF
+text-color=#5CAAC1    # Default: #FFFFFFFF
+width=300    # Default: 300
+height=150    # Default: 100
 # outer-margin=directional
 # Default: 0
-
-margin=5
-# Default: 10
-
-padding=7
-# Default: 5
-
-border-size=2
-# Default: 2
-
-border-color=#22F8FB
-# Default: #4C7899FF
-
-border-radius=15
-# Default: 0
-
-progress-color=over #009ddc
-# Default: over #5588AAFF
-
-icons=1
-# Default: 1
-
+margin=5    # Default: 10
+padding=7    # Default: 5
+border-size=2    # Default: 2
+border-color=#22F8FB    # Default: #4C7899FF
+border-radius=15    # Default: 0
+progress-color=over #009ddc    # Default: over #5588AAFF
+icons=1    # Default: 1
 # max-icon-size=px
 # Default: 64
-
-icon-path=/usr/share/icons/Yaru/
-# Default: ""
-
+icon-path=/usr/share/icons/fontawesome/    # Default: ""
 # icon-location=position
 # Default: left
-
-markup=1
-# Default: 1
-
-actions=1
-# Default: 1
-
+markup=1    # Default: 1
+actions=1    # Default: 1
 # history=0|1
 # Default: 1
-
 # format=format
 # Default: <b>%s</b>\n%b
 # Default when grouped: (%g) <b>%s</b>\n%b
-
-text-alignment=left
-# Default: left
-
-default-timeout=3333
-# Default: 0
-
+text-alignment=left    # Default: left
+default-timeout=3333    # Default: 0
 # ignore-timeout=0|1
 # Default: 0
-
 # group-by=field[,field,...]
 # Default: none
-
-max-visible=3
-# Default: 5
-
+max-visible=3    # Default: 5
 # output=name
 # Default: ""
-
-layer=overlay
-# Default: top
-
+layer=overlay    # Default: top
 # anchor=position
 # Default: top-right

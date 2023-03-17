@@ -68,19 +68,45 @@ bindsym $mod+Shift+o exec swaymsg "output * enable"
 # Power management #
 #------------------#
 
-set $mode_system System: (l)ock  | (e)xit  | (s)uspend | (h)ibernate | (r)eboot | power-(o)ff
+# set $mode_system System: (l)ock  | (e)xit  | (s)uspend | (h)ibernate | (r)eboot | power-(o)ff
 
+# bindsym $mod+Shift+e mode "$mode_system"
+
+# mode "$mode_system" {
+# 	bindsym l exec swaylock && swayidle, mode "default"
+# 	bindsym e exec loginctl terminate-session self
+# 	bindsym s exec swaylock -f && systemctl suspend, mode "default"
+# 	bindsym h exec swaylock -f && systemctl hibernate, mode "default"
+# 	bindsym r exec systemctl reboot
+# 	bindsym o exec systemctl poweroff
+# 	bindsym Escape mode "default"
+# }
+
+# Define icons for the power menu
+set $icon_lock ""
+set $icon_exit ""
+set $icon_suspend ""
+set $icon_hibernate ""
+set $icon_reboot ""
+set $icon_poweroff ""
+
+# Define the power menu options with icons and descriptions
+set $mode_system $icon_lock (l)ock Screen | $icon_exit E(x)it | $icon_suspend (s)uspend | $icon_hibernate (h)ibernate | $icon_reboot (r)eboot | $icon_poweroff (p)ower Off
+
+# Bind the power menu to a key combination
 bindsym $mod+Shift+e mode "$mode_system"
 
+# Define the power menu mode with bindings for each option
 mode "$mode_system" {
-	bindsym l exec swaylock && swayidle, mode "default"
-	bindsym e exec loginctl terminate-session self
-	bindsym s exec swaylock -f && systemctl suspend, mode "default"
-	bindsym h exec swaylock -f && systemctl hibernate, mode "default"
-	bindsym r exec systemctl reboot
-	bindsym o exec systemctl poweroff
-	bindsym Escape mode "default"
+    bindsym l exec swaylock && swayidle, mode "default"
+    bindsym e exec loginctl terminate-session self
+    bindsym s exec swaylock -f && systemctl suspend, mode "default"
+    bindsym h exec swaylock -f && systemctl hibernate, mode "default"
+    bindsym r exec systemctl reboot
+    bindsym o exec systemctl poweroff
+    bindsym Escape mode "default"
 }
+
 
 ### Key bindings
 #
@@ -300,7 +326,7 @@ bindsym ctrl+alt+Print exec grimshot --notify save
 bindsym alt+Print exec grimshot --notify copy active
 
 # Current window to file
-bindsym $mod+alt+Print exec grimshot --notify save active
+bindsym $mod+alt+p exec grimshot --notify save active
 
 # Region-select-screenshot to clipboard
 bindsym $mod+ctrl+p exec grim -g "$(slurp)" - | swappy -f -

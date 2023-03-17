@@ -1,3 +1,4 @@
+
 /* GENERAL */
 
 * {
@@ -39,7 +40,6 @@ button.focused {
     color: #bbc2cf;
 }
 
-button:hover,
 #workspaces button:hover {
     background: #2b125d;
 }
@@ -51,6 +51,7 @@ button {
 button:hover {
     border-radius: 0;
     border-width: 0px;
+    border-radius: 15px;
 }
 
 #workspaces button.visible {
@@ -64,7 +65,7 @@ button:hover {
 #workspaces button.focused.current_output {
     color: #ffffff;
     background-color: #5f27cd;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 #workspaces button.urgent {
@@ -86,14 +87,15 @@ button:hover {
 #backlight {
     color: yellow;
 }
+
 #battery {
     background: #2D2B55;
     border-radius: 15px;
     border-style: solid;
     border-width: 2px;
     border-color: #1EF4F6;
-    padding: 0px 5px 0px 5px;
     color: #bbc2cf;
+    padding: 0px 5px 0px 5px;
 }
 
 #battery.charging {
@@ -109,14 +111,21 @@ button:hover {
     color: #FCCE7B;
 }
 
+#battery.critical:not(.charging) {
+    background: #2d2b55;
+    border-radius: 15px;
+    background-color: #a60000;
+    color: #ffffff;
+}
+
 #bluetooth {
     background: #2D2B55;
     border-radius: 15px;
     border-style: solid;
     border-width: 2px;
     border-color: #1EF4F6;
-    padding: 0px 5px 0px 5px;
     color: #c9545d;
+    padding: 0px 5px 0px 5px;
 }
 
 #clock {
@@ -125,8 +134,8 @@ button:hover {
     border-style: solid;
     border-width: 2px;
     border-color: #1EF4F6;
-    padding: 0px 5px 0px 5px;
     color: #4db5bd;
+    padding: 0px 5px 0px 5px;
 }
 
 #custom-cpu_speed {
@@ -137,27 +146,16 @@ button:hover {
     border-color: #1EF4F6;
     color: #C57BDB;
     padding: 0px 5px 0px 5px;
-    border-radius: 15px;
-}
-
-#pulseaudio {
-    background: #2D2B55;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #1EF4F6;
-    padding: 0px 5px 0px 5px;
-    color: #4db5bd;
-}
-
-#custom-recorder {
-    font-size: 18px;
-    margin: 2px 7px 0px 7px;
-    color: #c9545d;
 }
 
 #custom-powermenu {
     color: lightcoral;
+}
+
+#custom-recorder {
+    color: #c9545d;
+    font-size: 18px;
+    margin: 2px 7px 0px 7px;
 }
 
 #custom-storage {
@@ -174,22 +172,8 @@ button:hover {
     padding: 0px 5px 0px 5px;
 }
 
-#temperature {
-    background: #2D2B55;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #1EF4F6;
-    padding: 5px 5px 5px 5px;
-    color: lightpink;
-}
-
-#temperature.critical {
-    background: #eb4d4b;
-}
-
 #mode {
-    color: #C57BDB;
+    color: #1EF4F6;
 }
 
 #network {
@@ -198,6 +182,26 @@ button:hover {
     border-style: solid;
     border-width: 2px;
     border-color: #1EF4F6;
-    padding: 0px 5px 0px 5px;
     color: #7bc275;
+    padding: 0px 5px 0px 5px;
+}
+
+#pulseaudio {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    color: #4db5bd;
+    padding: 0px 5px 0px 5px;
+}
+
+#temperature {
+    background: #2D2B55;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1EF4F6;
+    padding: 5px 5px 5px 5px;
+    color: lightpink;
 }
