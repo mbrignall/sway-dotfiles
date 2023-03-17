@@ -27,9 +27,13 @@ default_border none
 default_floating_border none
 
 input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
-    accel_profile "flat"
-    pointer_accel 1
+    accel_profile "adaptive"
+    pointer_accel 0.80
 }
+
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+bindgesture swipe:up exec $term
 
 ### Output configuration
 #
@@ -91,7 +95,7 @@ set $icon_reboot ""
 set $icon_poweroff ""
 
 # Define the power menu options with icons and descriptions
-set $mode_system $icon_lock (l)ock Screen | $icon_exit E(x)it | $icon_suspend (s)uspend | $icon_hibernate (h)ibernate | $icon_reboot (r)eboot | $icon_poweroff (p)ower Off
+set $mode_system $icon_lock (l)ock Screen | $icon_exit (e)xit | $icon_suspend (s)uspend | $icon_hibernate (h)ibernate | $icon_reboot (r)eboot | $icon_poweroff (p)ower Off
 
 # Bind the power menu to a key combination
 bindsym $mod+Shift+e mode "$mode_system"
@@ -269,6 +273,10 @@ bindsym $mod+r mode "resize"
 bar {
   swaybar_command waybar
   workspace_buttons yes
+  mode dock
+  hidden_state hide
+  mode hide
+  modifier Mod4
     }
 
 }
@@ -306,9 +314,9 @@ include ~/.config/sway/conf.d/*
 exec mako
 
 # start a applications on workspaces
-exec $term && sway && slack move container to workspace 1
+exec $term
+exec slack
 exec emacs
-exec xclock -tiecolor purple
 
 # Screenshots!
 #

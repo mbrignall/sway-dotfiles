@@ -1,6 +1,7 @@
 {
     "layer": "top",
     "position": "top",
+    "mode": "dock",
     "gtk-layer-shell": true,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock", "idle_inhibitor"],
