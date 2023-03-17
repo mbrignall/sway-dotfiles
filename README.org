@@ -4,8 +4,9 @@
 
 * Crafting a desktop experience
 
-#+ATTR_HTML: :align center
-[[./img/logo.png]]
+<p align="center">
+  <img src="./img/logo.png" />
+</p>
 
 ** What is this all about?
 
@@ -44,28 +45,28 @@ A weird thing happened with Chrome when I installed it, is that I could not use 
  - [TODO] More to come on this...
 
 
-**   Themes
+** Themes
 
 I've been using Doom Emacs recently and got inspiration from a built in theme 'doom-shades-of-purple'. I've tried to link the colour and theme to all the features added below. This is very much WIP and I will continue as I test the device.
 
-*** TODO [[https://codeberg.org/dnkl/fuzzel][Fuzzel]]
+*** [[https://codeberg.org/dnkl/fuzzel][Fuzzel]]
 
 #+ATTR_HTML: :align center
 [[./img/fuzzel.png]]
 
 Fuzzel does what it needs to do and is styled like the rest of the theme using the colors of shades-of-purple. Fuzzel seems really easy to configure.
 
-*** TODO [[https://github.com/emersion/mako][Mako]]
+*** [[https://github.com/emersion/mako][Mako]]
 
 Mako is an alternative to Dunst/Rofication. I use [[https://github.com/dunst-project/dunst][Dunst]] in my Regolith set up which works really well. Mako is just as cusomisable. I amended my config file to include all the parameters from the man page so I can build it out in time. Keen to explore the menu option.
 
 - next up add notifications for low battery!!
 
-*** TODO [[https://github.com/emersion/grim][Grim]] and [[https://github.com/jtheoof/swappy][Slurp/Swappy]]
+*** [[https://github.com/emersion/grim][Grim]] and [[https://github.com/jtheoof/swappy][Slurp/Swappy]]
 
 I use screengrab and area grabs a lot. Some I just need to go straight to clipboard and others I want to add context with an editor.
 
-*** TODO [[https://swaywm.org/][Sway]]
+*** [[https://swaywm.org/][Sway]]
 
 Added many Regolith keybindings and some more nice to haves - like switch to window resize (mod+r) and arrows for resize plus hold shift for a bigger jump.
 
@@ -85,18 +86,18 @@ Was keen to add some config to the touchpad of the Thinkpad. Amended sensitivity
 - Swipe right/left: Workspace switch
 - Swipe up: launch terminal
 
-*** TODO [[https://github.com/swaywm/swaylock][Swaylock]]
+*** [[https://github.com/swaywm/swaylock][Swaylock]]
 
 Styled a bit, but more a WIP. Note: Gave up on swaylock-effects as I found it was crashing if I plugged external monitors in whilst locked. This didn't seem like a great idea so I've now changed back to the swaylock in installed with dnf.
 
-*** TODO [[https://github.com/Alexays/Waybar][Waybar]]
+*** [[https://github.com/Alexays/Waybar][Waybar]]
 
 #+ATTR_HTML: :align center
 [[./img/waybar.png]]
 
 Waybar is a really cool, sway specific equivalent to something like [[https://polybar.github.io/][Polybar]]. I really like Waybar and using CSS to style it. This is different to Polybar which feels it has a higher entry level for tweaking.
 
-*** TODO Plymouth theme
+*** Plymouth theme
 
     I amended the theme to remove the Fedora logo on the splash screen (spinner theme) in favour of the Sway logo:
 
