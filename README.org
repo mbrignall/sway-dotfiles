@@ -4,9 +4,8 @@
 
 * Crafting a desktop experience
 
-<p align="center">
-  <img src="./img/logo.png" />
-</p>
+#+ATTR_HTML: :align center
+[[./img/logo.png]]
 
 ** What is this all about?
 
