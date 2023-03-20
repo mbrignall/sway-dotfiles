@@ -1,63 +1,6 @@
-# CLOCK SETTINGS
-clock
-datestr=%a, %e %B
-timestr=%R
-
-# COLOURS AND FONT
-bs-hl-color=ee2e24FF
-caps-lock-bs-hl-color=ee2e24FF
-caps-lock-key-hl-color=ffd204FF
+color=282828
 font=FuraMono Nerd Font
-inside-caps-lock-color=009ddc00
-inside-clear-color=8800ff88
-inside-color=8800ff88
-inside-ver-color=8800ff88
-inside-wrong-color=ee2e2400
-key-hl-color=8800ff88
-line-caps-lock-color=009ddcFF
-line-clear-color=8800ff88
-line-color=8800ff88
-line-ver-color=d9d8d8FF
-line-wrong-color=ee2e24FF
-ring-caps-lock-color=231f20D9
-ring-clear-color=8800ff88
-ring-color=8800ff88
-ring-ver-color=231f20D9
-ring-wrong-color=231f20D9
-separator-color=8800ff88
-text-caps-lock-color=009ddc
-text-clear-color=2d2b55
-text-color=2d2b55
-text-ver-color=d9d8d800
-text-wrong-color=ee2e2400
-
-# FADE TIME AND BACKGROUND EFFECTS
-effect-blur=7x3
-effect-scale=0.5
-effect-vignette=0.5:0.5
-fade-in=0.1
-
-# FLAGS
+indicator-radius=250
+inside-color=28282800
+image="/usr/share/backgrounds/wallpaper3.jpg"
 daemonize
-disable-caps-lock-text
-ignore-empty-password
-indicator
-indicator-caps-lock
-screenshots
-
-# INDICATOR SETTINGS
-indicator-radius=200
-indicator-thickness=25
-
-# LINE SETTINGS
-line-height=0
-line-padding=2
-line-width=1
-
-# PAM SETTINGS
-pam-auth
-pam-service=login
-
-# TIMING SETTINGS
-timeout=0
-idle-seconds=0

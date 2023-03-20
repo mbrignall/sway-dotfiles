@@ -23,36 +23,41 @@ echo ""
 read -p "Do you want to continue? (y/n) " answer
 
 if [ "$answer" != "${answer#[Yy]}" ]; then
-    # Remove directories if they already exist
+    # Remove directories if they exist and create new ones
     for folder in "${folders[@]}"
     do
         if [ -d "$HOME/.config/$folder" ]; then
             rm -rf "$HOME/.config/$folder"
             echo "Removed directory $HOME/.config/$folder"
         fi
-    done
-
-    # Create directories
-    for folder in "${folders[@]}"
-    do
         mkdir -p "$HOME/.config/$folder"
         echo "Created directory $HOME/.config/$folder"
     done
 
     # Symlink config files to the corresponding directories
-    for file in "$current_dir/config" "$current_dir/fuzzel.ini"
+    for folder in "sway" "swaylock" "waybar" "mako"
     do
-        filename=$(basename "$file")
-        for folder in "sway" "swaylock" "waybar" "mako" "fuzzel"
-        do
-            target_dir="$HOME/.config/$folder"
-            target_file="$target_dir/$filename"
-            if [ ! -e "$target_file" ]; then
-                ln -s "$file" "$target_file"
-                echo "Symlinked $filename to $target_dir"
-            fi
-        done
+        target_dir="$HOME/.config/$folder"
+        target_file="$target_dir/config"
+        if [ ! -e "$target_file" ]; then
+            ln -s "$current_dir/$folder/config" "$target_file"
+            echo "Symlinked config to $target_dir"
+        fi
     done
+    target_dir="$HOME/.config/fuzzel"
+    target_file="$target_dir/fuzzel.ini"
+    if [ ! -e "$target_file" ]; then
+        ln -s "$current_dir/fuzzel/fuzzel.ini" "$target_file"
+        echo "Symlinked fuzzel.ini to $target_dir"
+    fi
+    target_dir="$HOME/.config/waybar"
+    target_file="$target_dir/style.css"
+    if [ ! -e "$target_file" ]; then
+        ln -s "$current_dir/waybar/style.css" "$target_file"
+        echo "Symlinked style.css to $target_dir"
+    fi
+
+    sudo cp "$current_dir/img/wallpaper2.jpg" /usr/share/backgrounds/
 
     echo "Done!"
 else
