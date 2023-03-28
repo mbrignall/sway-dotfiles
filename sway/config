@@ -33,9 +33,9 @@ input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
     pointer_accel 0.80
 }
 
-bindgesture swipe:right workspace prev
-bindgesture swipe:left workspace next
-bindgesture swipe:up exec $term
+#bindgesture swipe:right workspace prev
+#bindgesture swipe:left workspace next
+#bindgesture swipe:up exec $term
 
 ### Output configuration
 #
@@ -318,7 +318,7 @@ exec mako
 # start a applications on workspaces
 exec $term
 exec slack
-exec emacs
+exec emacs --daemon
 
 # Screenshots!
 #
