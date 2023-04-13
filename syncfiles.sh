@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # Define the list of folder names
-folders=("fuzzel" "mako" "sway" "swaylock" "waybar")
+folders=("fuzzel" "mako" "sway" "swaylock" "waybar" "alacritty")
 
 # Get the current directory and assign it to a variable
 current_dir=$(pwd)
 
 # Print a summary of the changes that will be made
 echo "This script will create the following directories in ~/.config and symlink the files within back to the $current_dir directory:"
+echo "- alacritty"
 echo "- fuzzel"
 echo "- mako"
 echo "- sway"
@@ -15,7 +16,7 @@ echo "- swaylock"
 echo "- waybar"
 echo ""
 echo "The following files will be symlinked:"
-echo "- config to ~/.config/sway/config, ~/.config/swaylock/config, ~/.config/waybar/config, and ~/.config/mako/config"
+echo "- config to ~/.config/alacritty/alacritty.ini, /.config/sway/config, ~/.config/swaylock/config, ~/.config/waybar/config, and ~/.config/mako/config"
 echo "- fuzzel.ini to ~/.config/fuzzel/fuzzel.ini"
 echo ""
 
@@ -56,8 +57,16 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
         ln -s "$current_dir/waybar/style.css" "$target_file"
         echo "Symlinked style.css to $target_dir"
     fi
+    target_dir="$HOME/.config/alacritty"
+    target_file="$target_dir/alacritty.ini"
+    if [ ! -e "$target_file" ]; then
+        ln -s "$current_dir/alacritty.ini" "$target_file"
+        echo "Symlinked alacritty.ini to $target_dir"
+    fi
 
-    sudo cp "$current_dir/img/wallpaper2.jpg" /usr/share/backgrounds/
+
+
+    sudo cp "$current_dir/img/wallpaper.jpg" /usr/share/backgrounds/
 
     echo "Done!"
 else
