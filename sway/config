@@ -1,6 +1,7 @@
 # My config for Sway 16/03/23
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec /usr/libexec/polkit-gnome-authentication-agent-1
 
 ### Variables
 #
@@ -40,7 +41,7 @@ bindgesture swipe:up exec $term
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/wallpaper3.jpg fill
+output * bg /usr/share/backgrounds/wallpaper.jpg fill
 
 output eDP1 pos 2560 1440 res 2560x1600
 output DP-5 pos 0 0 res 2560x1440
