@@ -4,11 +4,12 @@
     "mode": "dock",
     "gtk-layer-shell": true,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock", "idle_inhibitor"],
-    "modules-right": ["network", "custom/cpu_speed", "battery", "custom/weather","pulseaudio", "bluetooth"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["bluetooth", "network", "battery", "custom/cpu_speed", "pulseaudio", "clock"],
     "sway/mode": {
         "format": " {}"
     },
+
     "sway/workspaces": {
         "format": "{icon}",
         "all-outputs": true,
@@ -16,18 +17,22 @@
             "default": "  ",
         }
     },
+
     "sway/window": {
         "max-length": 60,
         "tooltip": false
     },
+
     "clock": {
         "format": " {:  %a %d %b |   %H:%M} ",
         "on-click": "gnome-calendar"
     },
+
     "sway/mode": {
-        "format": "👉 {}",
+        "format": ">>> {}",
         "separate-outputs": true
     },
+
     "custom/cpu_speed": {
         "interval": 10,
         "return-type": "json",
@@ -37,9 +42,10 @@
         "escape": true,
         "on-click": "alacritty -e htop"
     },
+
     "battery": {
-    "format": " <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}% {time} ",
-    "format-icons": ["", "", "", "", ""],
+    "format": " <span font='Font Awesome 5 Free 11'> {icon} </span> {capacity}% {time} ",
+    "format-icons": [ "", "", "", "", "" ],
     "format-time": "{H}h{M}m",
     "format-charging": " <span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% {time} ",
     "format-full": " <span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged ",
@@ -48,9 +54,11 @@
         "warning": 15,
         "critical": 5
     },
+
     "tooltip": false,
     "on-click": "gnome-power-statistics"
     },
+
     "network": {
         "format": " {icon} ",
         "format-alt": " {ipaddr}/{cidr} {icon} ",
@@ -61,8 +69,9 @@
         "on-click": "gnome-control-center wifi",
         "tooltip": false
     },
+
     "pulseaudio": {
-        "format": " <span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}% ",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}%",
         "format-alt": " <span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}% ",
         "format-alt-click": "click-right",
         "format-muted": " <span font='Font Awesome 5 Free 11'></span> ",
@@ -74,46 +83,19 @@
         "on-click": "gnome-control-center sound",
         "tooltip": false
     },
+
     "bluetooth": {
-    "format": "  ",
-    "format-off": "  ",
+    "format": "  ",
+    "format-off": "  ",
     "on-click": "blueberry",
     "tooltip-format": "{status}"
-    },
-    "custom/storage": {
-        "format": "{} ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
-    },
-    "custom/weather": {
-        "format": " {} ",
-        "format-alt": "{alt}: {}",
-        "format-alt-click": "click-right",
-        "interval": 1800,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/weather.sh",
-        "exec-if": "ping wttr.in -c1",
-        // "on-click": "foot -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
-        "on-click": "gnome-weather"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-alt": "{icon} idle {status}",
-        "format-alt-click": "click-right",
-        "format-icons": {
-            "activated": "<span font='Font Awesome 5 Free 9'></span>",
-            "deactivated": "<span font='Font Awesome 5 Free 9'></span>"
-        },
-        "tooltip": false
     },
 
     "tray": {
         "icon-size": 18,
         "spacing": 18
     },
+
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 20,

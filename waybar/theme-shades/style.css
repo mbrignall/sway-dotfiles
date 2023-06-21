@@ -11,14 +11,10 @@
 
 window#waybar {
     background: #2D2B55;
-    border-width: 1px;
-    border-color: #1E1E3F;
-    border-style: solid;
     border-radius: 0px;
 }
 
 button.focused {
-    background-color: #5f27cd;
 }
 
 #workspaces {
@@ -38,7 +34,6 @@ button.focused {
 
 button:hover,
 #workspaces button:hover {
-    background: #2b125d;
 }
 
 button {
