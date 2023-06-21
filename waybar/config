@@ -1,108 +1,102 @@
 {
-    "layer": "top",
-    "position": "top",
-    "mode": "dock",
-    "gtk-layer-shell": true,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["bluetooth", "network", "battery", "custom/cpu_speed", "pulseaudio", "clock"],
-    "sway/mode": {
-        "format": " {}"
-    },
+  "layer": "top",
+  "position": "top",
+  "mode": "dock",
+  "gtk-layer-shell": true,
+  "panel-size": 30,
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["wlr/taskbar"],
+  "modules-right": ["bluetooth", "network", "battery", "custom/cpu_speed", "pulseaudio", "clock"],
 
-    "sway/workspaces": {
-        "format": "{icon}",
-        "all-outputs": true,
-        "format-icons": {
-            "default": "  ",
-        }
-    },
+  "sway/mode": {
+    "format": " {}"
+  },
 
-    "sway/window": {
-        "max-length": 60,
-        "tooltip": false
-    },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}:{icon}",
+    "format-icons": {
+      "1":"▲",
+      "2":"▼",
+      "3":"◆",
+      "4":"◇",
+      "5":"■",
+      "urgent":"!",
+      "focused":"●",
+      "default":"○"
+    }
+  },
 
-    "clock": {
-        "format": " {:  %a %d %b |   %H:%M} ",
-        "on-click": "gnome-calendar"
-    },
+  "clock": {
+    "format": " {:  %a %d %b |   %H:%M} ",
+    "on-click": "bfcal"
+  },
 
-    "sway/mode": {
-        "format": ">>> {}",
-        "separate-outputs": true
-    },
+  "custom/cpu_speed": {
+    "interval": 10,
+    "return-type": "json",
+    "exec": "/home/mbrignall/.config/waybar/modules/cpu_speed.sh",
+    "format": " {icon} {} ",
+    "format-icons": [""],
+    "escape": true,
+    "on-click": "alacritty -e htop"
+  },
 
-    "custom/cpu_speed": {
-        "interval": 10,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/cpu_speed.sh",
-        "format": " <span font='Font Awesome 5 Free 11'>{icon}</span>  {} ",
-        "format-icons": [""],
-        "escape": true,
-        "on-click": "alacritty -e htop"
-    },
-
-    "battery": {
-    "format": " <span font='Font Awesome 5 Free 11'> {icon} </span> {capacity}% {time} ",
-    "format-icons": [ "", "", "", "", "" ],
+  "battery": {
+    "format": " {icon}  {capacity}% {time} ",
+    "format-icons": ["  ", "  ", "  ", "  ", "  "],
     "format-time": "{H}h{M}m",
-    "format-charging": " <span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% {time} ",
-    "format-full": " <span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged ",
+    "format-charging": "   {icon}  {capacity}% {time} ",
+    "format-full": "   {icon}  Charged ",
     "interval": 30,
     "states": {
-        "warning": 15,
-        "critical": 5
+      "warning": 15,
+      "critical": 5
     },
-
-    "tooltip": false,
     "on-click": "gnome-power-statistics"
-    },
+  },
 
-    "network": {
-        "format": " {icon} ",
-        "format-alt": " {ipaddr}/{cidr} {icon} ",
-        "format-alt-click": "click-right",
-        "format-wifi": " <span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%) ",
-        "format-ethernet": " {ifname}",
-        "format-disconnected": "⚠ Disconnected",
-        "on-click": "gnome-control-center wifi",
-        "tooltip": false
-    },
+  "network": {
+    "format": " {icon} ",
+    "format-alt": " {ipaddr}/{cidr} {icon} ",
+    "format-alt-click": "click-right",
+    "format-wifi": "   {essid} ({signalStrength}%) ",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "⚠ Disconnected",
+    "on-click": "alacritty -e nmtui"
+  },
 
-    "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}%",
-        "format-alt": " <span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume:4}% ",
-        "format-alt-click": "click-right",
-        "format-muted": " <span font='Font Awesome 5 Free 11'></span> ",
-        "format-icons": {
-            "headphone": [" ", " ", " ", " "],
-            "default": ["", "", "", ""]
-        },
-        "scroll-step": 2,
-        "on-click": "gnome-control-center sound",
-        "tooltip": false
+  "pulseaudio": {
+    "format": " {icon:2}{volume:4}% ",
+    "format-alt": " {icon:2}{volume:4}% ",
+    "format-alt-click": "click-right",
+    "format-muted": "  ",
+    "format-icons": {
+      "headphone": [" ", " ", " ", " "],
+      "default": ["", "", "", ""]
     },
+    "scroll-step": 2,
+    "on-click": "pavucontrol"
+  },
 
-    "bluetooth": {
+  "bluetooth": {
     "format": "  ",
     "format-off": "  ",
-    "on-click": "blueberry",
-    "tooltip-format": "{status}"
-    },
+    "on-click": "blueberry"
+  },
 
-    "tray": {
-        "icon-size": 18,
-        "spacing": 18
-    },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 18
+  },
 
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 20,
-        "icon-theme": "Flat-Remix-Violet-Dark",
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close"
-    }
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "icon-theme": "Flat-Remix-Violet-Dark",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+  }
 }
-

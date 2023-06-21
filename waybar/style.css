@@ -1,9 +1,58 @@
 /* GENERAL */
 
 * {
+    border-radius: 0;
     font-family: "FiraMono Nerd Font";
     font-size: 15px;
     font-weight: 500;
+    padding: 0;
+    margin: 0;
     margin-right: 2px;
     margin-left: 2px;
+    transition-delay: 3s;
+}
+
+
+#battery, #pulseaudio, #network, #bluetooth {
+    border-top: 5px solid #657b83;
+}
+
+#clock {
+    background-color: lightslategrey;
+    border-top: 5px solid #1e1e3f;
+    color:white;
+    text-shadow: 2px 1px 2px #1e1e3f;
+}
+
+#workspaces {
+    font-size: 16px;
+    text-shadow: 2px 1px 2px #1e1e3f;
+}
+
+#workspaces button {
+    color: #657b83;
+}
+
+#workspaces button.visible {
+    color: #657b83;
+    border-top: 5px solid white;
+}
+
+#workspaces button.focused {
+    color: #657b83;
+    border-top: 5px solid #1e1e3f;
+}
+
+#workspaces button.urgent {
+    color: #657b83;
+    background-color: #1e1e3f;
+}
+
+#workspaces button.persistent {
+    color: #657b83;
+}
+
+#workspaces button.current_output {
+    color: #657b83;
+    border-top: 5px solid #657b83;
 }

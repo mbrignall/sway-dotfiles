@@ -58,7 +58,7 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     target_dir="$HOME/.config/alacritty"
     target_file="$target_dir/alacritty.ini"
     if [ ! -e "$target_file" ]; then
-        ln -s "$current_dir/alacritty.ini" "$target_file"
+        ln -s "$current_dir/alacritty/alacritty.ini" "$target_file"
         echo "Symlinked alacritty.ini to $target_dir"
     fi
 

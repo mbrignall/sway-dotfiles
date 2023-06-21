@@ -292,7 +292,7 @@ for_window [app_id="org.gnome.Settings"] floating enable
 for_window [app_id="org.gnome.Calendar"] floating enable
 for_window [app_id="org.gnome.Weather"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
-for_window [app_id="gnome-power-statistics"] floating enable
+for_window [app_id="bfcal"] floating enable
 for_window [app_id="blueberry"] floating enable
 for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
 

@@ -1,6 +1,6 @@
 color=282828
-font=FuraMono Nerd Font
-indicator-radius=250
+font=FiraMono Nerd Font
+indicator-radius=150
 inside-color=28282800
-image="/usr/share/backgrounds/wallpaper.jpg"
+image="$HOME/.local/share/wallpapers/wallpaper.jpg"
 daemonize
