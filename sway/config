@@ -41,7 +41,7 @@ input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg "$HOME/.local/share/wallpapers/wallpaper.jpg" fill
+output * bg "$HOME/.local/share/wallpapers/wallpaper1.jpg" fill
 
 output eDP1 pos 2560 1440 res 2560x1600
 output DP-5 pos 0 0 res 2560x1440
@@ -49,9 +49,9 @@ output DP-6 pos 2560 0 res 2560x1440
 
 bindsym $mod+d exec wdisplays
 
-#set $laptop eDP-1
-#bindswitch --reload --locked lid:on output $laptop disable
-#bindswitch --reload --locked lid:off output $laptop enable
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
 
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -288,10 +288,7 @@ bar {
 # Floating windows
 #
 
-for_window [app_id="org.gnome.Settings"] floating enable
-for_window [app_id="org.gnome.Calendar"] floating enable
-for_window [app_id="org.gnome.Weather"] floating enable
-for_window [app_id="org.gnome.Nautilus"] floating enable
+for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="bfcal"] floating enable
 for_window [app_id="blueberry"] floating enable
 for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750

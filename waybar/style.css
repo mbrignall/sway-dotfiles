@@ -12,6 +12,11 @@
     transition-delay: 3s;
 }
 
+#waybar {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    box-shadow: none;
+}
 
 #battery, #pulseaudio, #network, #bluetooth {
     border-top: 5px solid #657b83;
@@ -20,39 +25,42 @@
 #clock {
     background-color: lightslategrey;
     border-top: 5px solid #1e1e3f;
-    color:white;
+    color:whitesmoke;
     text-shadow: 2px 1px 2px #1e1e3f;
 }
 
 #workspaces {
-    font-size: 16px;
-    text-shadow: 2px 1px 2px #1e1e3f;
+    text-shadow: 2px 1px 2px whitesmoke;
 }
 
 #workspaces button {
-    color: #657b83;
+    color: #1e1e3f;
+    text-shadow: 2px 1px 2px #1e1e3f;
 }
 
+#workspaces:hover {
+    background-color: lightslategrey;
+}
 #workspaces button.visible {
-    color: #657b83;
+    color: #1e1e3f;
     border-top: 5px solid white;
 }
 
 #workspaces button.focused {
-    color: #657b83;
+    color: #1e1e3f;
     border-top: 5px solid #1e1e3f;
 }
 
 #workspaces button.urgent {
-    color: #657b83;
+    color: #1e1e3f;
     background-color: #1e1e3f;
 }
 
 #workspaces button.persistent {
-    color: #657b83;
+    color: #1e1e3f;
 }
 
 #workspaces button.current_output {
-    color: #657b83;
+    color: #1e1e3f;
     border-top: 5px solid #657b83;
 }
