@@ -1,10 +1,10 @@
-# My config for Sway 16/03/23
+# My config for Sway 24/06/2023
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec /usr/libexec/polkit-gnome-authentication-agent-1
 
 ### Variables
-#
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
@@ -14,18 +14,12 @@ set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
 set $term alacritty
-
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-#set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu "fuzzel"
 
 font pango:"FiraMono Nerd Font" Regular 12
 
-# Remove borders
+# Remove borders:
 default_border none
 default_floating_border none
 
@@ -34,15 +28,14 @@ input  "1267:12811:ELAN0683:00_04F3:320B_Touchpad" {
     pointer_accel 0.80
 }
 
-#bindgesture swipe:right workspace prev
-#bindgesture swipe:left workspace next
-#bindgesture swipe:up exec $term
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+bindgesture swipe:up exec $term
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# Wallpaper:
 output * bg "$HOME/.local/share/wallpapers/wallpaper1.jpg" fill
 
+# Monitor Management:
 output eDP1 pos 2560 1440 res 2560x1600
 output DP-5 pos 0 0 res 2560x1440
 output DP-6 pos 2560 0 res 2560x1440
@@ -53,57 +46,30 @@ set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
-### Idle configuration
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
+# Idle configuration:
 exec swayidle -w \
 	timeout 300 'swaylock -f' \
 	timeout 600 'swaymsg "output * dpms off"' \
 		resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f'
 
-#exec_always ~/.config/sway/scripts/clamshell.sh
-
-#bindswitch --reload --locked lid:on output eDP-1 disable
-#bindswitch --reload --locked lid:off output eDP-1 enable
-
 bindsym $mod+Shift+o exec swaymsg "output * enable"
 
-#------------------#
-# Power management #
-#------------------#
-
-# set $mode_system System: (l)ock  | (e)xit  | (s)uspend | (h)ibernate | (r)eboot | power-(o)ff
-
-# bindsym $mod+Shift+e mode "$mode_system"
-
-# mode "$mode_system" {
-# 	bindsym l exec swaylock && swayidle, mode "default"
-# 	bindsym e exec loginctl terminate-session self
-# 	bindsym s exec swaylock -f && systemctl suspend, mode "default"
-# 	bindsym h exec swaylock -f && systemctl hibernate, mode "default"
-# 	bindsym r exec systemctl reboot
-# 	bindsym o exec systemctl poweroff
-# 	bindsym Escape mode "default"
-# }
-
-# Define icons for the power menu
+# Define icons for the power menu:
 set $icon_lock ""
-set $icon_exit ""
+set $icon_exit ""
 set $icon_suspend ""
 set $icon_hibernate ""
 set $icon_reboot ""
 set $icon_poweroff ""
 
-# Define the power menu options with icons and descriptions
-set $mode_system $icon_lock (l)ock Screen | $icon_exit (e)xit | $icon_suspend (s)uspend | $icon_hibernate (h)ibernate | $icon_reboot (r)eboot | $icon_poweroff (p)ower Off
+# Define the power menu options with icons and descriptions:
+set $mode_system $icon_lock (l)ock | $icon_exit (e)xit | $icon_suspend (s)uspend | $icon_hibernate (h)ibernate | $icon_reboot (r)eboot | $icon_poweroff (p)ower
 
-# Bind the power menu to a key combination
+# Bind the power menu to a key combination:
 bindsym $mod+Shift+e mode "$mode_system"
 
-# Define the power menu mode with bindings for each option
+# Define the power menu mode with bindings for each option:
 mode "$mode_system" {
     bindsym l exec swaylock && swayidle, mode "default"
     bindsym e exec loginctl terminate-session self
@@ -115,26 +81,26 @@ mode "$mode_system" {
 }
 
 
-### Key bindings
-#
+### Key bindings:
+
 # Basics:
-#
-    # Start a terminal
+
+    # Start a terminal:
     bindsym $mod+Return exec $term
 
-    # Kill focused window
+    # Kill focused window:
     bindsym $mod+Shift+q kill
 
-    # Launch Fuzzel
+    # Launch Fuzzel:
     bindsym $mod+space exec fuzzel
 
-    # Audio Config
+    # Audio Config:
     bindsym $mod+Shift+a exec gnome-control-center sound
 
-    # Open Browser
+    # Open Browser:
     bindsym $mod+Shift+Return exec google-chrome-stable
 
-    # Open Nautilus
+    # Open Nautilus:
     bindsym $mod+shift+n exec nautilus
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -144,39 +110,36 @@ mode "$mode_system" {
     # mouse button for dragging.
     floating_modifier $mod normal
 
-    # Reload the configuration file
+    # Reload the configuration file:
     bindsym $mod+Shift+r reload
 
-    # Exit sway (logs you out of your Wayland session)
-    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
 # Moving around:
-#
-    # Move your focus around
+
+    # Move your focus around:
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
+    # Or use $mod+[up|down|left|right]:
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
-    # Move the focused window with the same, but add Shift
+    # Move the focused window with the same, but add Shift:
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
+    # Ditto, with arrow keys:
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
+
 # Workspaces:
-#
-    # Switch to workspace
+
+    # Switch to workspace:
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
     bindsym $mod+3 workspace number 3
@@ -187,7 +150,7 @@ mode "$mode_system" {
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
-    # Move focused container to workspace
+    # Move focused container to workspace:
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
@@ -200,34 +163,34 @@ mode "$mode_system" {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-#
+
 # Layout stuff:
-#
+
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
-    # Switch the current container between different layout styles
+    # Switch the current container between different layout styles:
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
-    # Make the current focus fullscreen
+    # Make the current focus fullscreen:
     bindsym $mod+f fullscreen
 
-    # Toggle the current focus between tiling and floating mode
+    # Toggle the current focus between tiling and floating mode:
     bindsym $mod+Shift+space floating toggle
 
-    # Swap focus between the tiling area and the floating area
+    # Swap focus between the tiling area and the floating area:
     #bindsym $mod+space focus mode_toggle
 
-    # Move focus to the parent container
+    # Move focus to the parent container:
     bindsym $mod+a focus parent
-#
+
 # Scratchpad:
-#
+
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
 
@@ -237,10 +200,8 @@ mode "$mode_system" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-#
-# Resizing containers:
-#
 
+# Resizing containers:
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -269,10 +230,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
 # Status Bar:
-#
-
 bar {
   swaybar_command waybar
   workspace_buttons yes
@@ -284,60 +242,52 @@ bar {
 
 }
 
-#
-# Floating windows
-#
-
-for_window [app_id="pavucontrol"] floating enable
-for_window [app_id="bfcal"] floating enable
-for_window [app_id="blueberry"] floating enable
+# Floating windows:
+set $opacity 0.8
+for_window [app_id="pavucontrol"] floating enable; opacity $opacity
+for_window [app_id="bfcal"] floating enable; opacity $opacity
+for_window [app_id="blueberry"] floating enable; opacity $opacity
 for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
 
-#
 # FN Keys:
-#
 
+# Brightnessctl:
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
 bindsym XF86MonBrightnessUp exec brightnessctl set +5% && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
 
+# Volume up/down/mute:
 bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
 bindsym XF86AudioLowerVolume exec amixer set Master 3%-
 bindsym XF86AudioMute exec amixer set Master toggle
 
-#include /etc/sway/config.d/*
 include ~/.config/sway/conf.d/*
 
-#
 # Autostart:
-#
-
 exec mako
-
-# start a applications on workspaces
 exec $term
 exec slack
 exec emacs --daemon
 
-# Screenshots!
-#
 
-# Current display to clipboard
+# Screenshots:
+
+# Current display to clipboard:
 bindsym Print exec grimshot --notify copy output
 
-# Current display to file
+# Current display to file:
 bindsym $mod+Print exec grimshot --notify save output
 
-# All displays to file
+# All displays to file:
 bindsym ctrl+alt+Print exec grimshot --notify save
 
-# Current window to clipboard
+# Current window to clipboard:
 bindsym alt+Print exec grimshot --notify copy active
 
-# Current window to file
+# Current window to file:
 bindsym $mod+alt+p exec grimshot --notify save active
 
-# Region-select-screenshot to clipboard
+# Region-select-screenshot to clipboard:
 bindsym $mod+ctrl+p exec grim -g "$(slurp)" - | swappy -f -
 
-# Region-select-screenshot to file
+# Region-select-screenshot to file:
 bindsym $mod+p exec grimshot --notify copy area
