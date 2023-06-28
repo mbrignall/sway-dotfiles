@@ -36,7 +36,7 @@ set $opacity 0.9
 for_window [app_id="pavucontrol"] floating enable; opacity $opacity
 for_window [app_id="codes.loers.Karlender"] floating enable; opacity $opacity
 for_window [app_id="blueberry"] floating enable; opacity $opacity
-for_window [app_id="alacritty -c nmtui"] floating enable; opacity $opacity
+for_window [app_id="alacritty -e nmtui"] floating enable; opacity $opacity
 for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
 
 # FN Keys:
