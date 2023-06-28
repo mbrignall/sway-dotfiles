@@ -30,7 +30,7 @@
 
   "clock": {
     "format": " {:  %a %d %b |   %H:%M} ",
-    "on-click": "bfcal"
+    "on-click": "karlender"
   },
 
   "custom/cpu_speed": {
@@ -64,7 +64,7 @@
     "format-wifi": "   {essid} ({signalStrength}%) ",
     "format-ethernet": " {ifname}",
     "format-disconnected": "⚠ Disconnected",
-    "on-click": "alacritty -e nmtui"
+    "on-click": "iwgtk"
   },
 
   "pulseaudio": {

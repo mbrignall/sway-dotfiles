@@ -1,7 +1,9 @@
 # My config for Sway 24/06/2023
 
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway SWAYSOCK
 exec /usr/libexec/polkit-gnome-authentication-agent-1
+exec dbus-sway-environment
+exec configure-gtk
 
 ### Variables
 
@@ -16,6 +18,59 @@ set $right l
 
 set $term alacritty
 set $menu "fuzzel"
+
+# Status Bar:
+bar {
+  swaybar_command waybar
+  workspace_buttons yes
+  mode dock
+  hidden_state hide
+  mode hide
+  modifier Mod4
+    }
+
+}
+
+# Floating windows:
+set $opacity 0.9
+for_window [app_id="pavucontrol"] floating enable; opacity $opacity
+for_window [app_id="karlender"] floating enable; opacity $opacity
+for_window [app_id="blueberry"] floating enable; opacity $opacity
+for_window [app_id="iwgtk"] floating enable; opacity $opacity
+for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
+
+# FN Keys:
+
+# Brightnessctl:
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
+bindsym XF86MonBrightnessUp exec brightnessctl set +5% && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
+
+# Volume up/down/mute:
+bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
+bindsym XF86AudioLowerVolume exec amixer set Master 3%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+include ~/.config/sway/conf.d/*
+
+
+
+# Screenshots:
+
+# Current display to clipboard:
+bindsym Print exec grimshot --notify copy output
+# Current display to file:
+bindsym $mod+Print exec grimshot --notify save output
+# All displays to file:
+bindsym ctrl+alt+Print exec grimshot --notify save
+# Current window to clipboard:
+bindsym alt+Print exec grimshot --notify copy active
+# Current window to file:
+bindsym $mod+alt+p exec grimshot --notify save active
+# Region-select-screenshot to clipboard:
+bindsym $mod+p exec grim -g "$(slurp)" - | swappy -f -
+# Region-select-screenshot to file:
+bindsym $mod+ctrl+p exec grimshot --notify copy area
+
 
 font pango:"FiraMono Nerd Font" Regular 12
 
@@ -48,10 +103,10 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 # Idle configuration:
 exec swayidle -w \
-	timeout 300 'swaylock -f' \
-	timeout 600 'swaymsg "output * dpms off"' \
-		resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f'
+    timeout 300 'swaylock -f' \
+    timeout 600 'swaymsg "output * dpms off"' \
+        resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f'
 
 bindsym $mod+Shift+o exec swaymsg "output * enable"
 
@@ -95,13 +150,13 @@ mode "$mode_system" {
     bindsym $mod+space exec fuzzel
 
     # Audio Config:
-    bindsym $mod+Shift+a exec gnome-control-center sound
+    bindsym $mod+Shift+a exec pavucontrol
 
     # Open Browser:
     bindsym $mod+Shift+Return exec google-chrome-stable
 
     # Open Nautilus:
-    bindsym $mod+shift+n exec nautilus
+    bindsym $mod+shift+n exec
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -230,64 +285,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Status Bar:
-bar {
-  swaybar_command waybar
-  workspace_buttons yes
-  mode dock
-  hidden_state hide
-  mode hide
-  modifier Mod4
-    }
-
-}
-
-# Floating windows:
-set $opacity 0.8
-for_window [app_id="pavucontrol"] floating enable; opacity $opacity
-for_window [app_id="bfcal"] floating enable; opacity $opacity
-for_window [app_id="blueberry"] floating enable; opacity $opacity
-for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
-
-# FN Keys:
-
-# Brightnessctl:
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
-bindsym XF86MonBrightnessUp exec brightnessctl set +5% && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
-
-# Volume up/down/mute:
-bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
-bindsym XF86AudioLowerVolume exec amixer set Master 3%-
-bindsym XF86AudioMute exec amixer set Master toggle
-
-include ~/.config/sway/conf.d/*
 
 # Autostart:
 exec mako
-exec $term
-exec slack
 exec emacs --daemon
-
-
-# Screenshots:
-
-# Current display to clipboard:
-bindsym Print exec grimshot --notify copy output
-
-# Current display to file:
-bindsym $mod+Print exec grimshot --notify save output
-
-# All displays to file:
-bindsym ctrl+alt+Print exec grimshot --notify save
-
-# Current window to clipboard:
-bindsym alt+Print exec grimshot --notify copy active
-
-# Current window to file:
-bindsym $mod+alt+p exec grimshot --notify save active
-
-# Region-select-screenshot to clipboard:
-bindsym $mod+ctrl+p exec grim -g "$(slurp)" - | swappy -f -
-
-# Region-select-screenshot to file:
-bindsym $mod+p exec grimshot --notify copy area

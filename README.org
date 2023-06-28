@@ -7,6 +7,8 @@
 #+ATTR_HTML: :align center
 [[./img/logo.png]]
 
+nb: I've moved to nixOS now and have been updating this repo with my dotfiles. If you're keen to see the configuration.nix go [[https://www.github.com/mbrignall/nixos-config][here]].
+
 ** What is this all about?
 
 This is my first attempt at a sway version of my regular Regolith setup. If you've not checked out [[https://regolith-desktop.com/][Regolith]] please do so - it's i3 on Ubuntu.
@@ -14,7 +16,7 @@ This is my first attempt at a sway version of my regular Regolith setup. If you'
 Here is what 'my' Sway looks like:
 
 #+ATTR_HTML: :align center :width 300px
-[[./img/desktop.png]]
+[[./img/desktopnew.png]]
 
 I received a test laptop from our work supplier. It's a Lenovo ThinkPad P16s. Initial boot had some issues with the laptop lid and resume (i.e. when I closed the lid the laptop screen would turn off but not wake up after suspend resumed)
 

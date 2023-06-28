@@ -1,0 +1,16 @@
+/* Remove rounded corners */
+.titlebar,
+.titlebar .background,
+decoration,
+window,
+window.background
+{
+    border-radius: 0;
+    font-family: FiraMono Nerd Font;
+}
+
+/* Remove csd shadows */
+decoration, decoration:backdrop
+{
+    box-shadow: none;
+}
