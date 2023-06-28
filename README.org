@@ -11,8 +11,6 @@ nb: I've moved to nixOS now and have been updating this repo with my dotfiles. I
 
 ** What is this all about?
 
-This is my first attempt at a sway version of my regular Regolith setup. If you've not checked out [[https://regolith-desktop.com/][Regolith]] please do so - it's i3 on Ubuntu.
-
 Here is what 'my' Sway looks like:
 
 #+ATTR_HTML: :align center :width 300px
@@ -27,8 +25,6 @@ sudo dmidecode -s bios-version
 If the response is less than 1.30/1.10 then I recommend upgrading.
 
 The fix for this was to [[https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-p-series-laptops/thinkpad-p16s-gen-1-type-21bt-21bu/21bt/21bt000vuk/pf3z0wnh/downloads/driver-list/component?name=BIOS%2FUEFI][update the BIOS]]. Lenovo released a new version on 22nd December 2022 which addressed this issue and some others for Linux.
-
-Installed packages by myself are stored in the [[./installed.txt]] file.
 
 A weird thing happened with Chrome when I installed it, is that I could not use file browser (Nautilus) to 'save as' on images for example. I had to go to the chrome://flags/ and search Ozone and change the platform to Wayland. Firefox however operated as expected.
 

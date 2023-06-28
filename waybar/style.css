@@ -18,49 +18,53 @@
     box-shadow: none;
 }
 
-#battery, #pulseaudio, #network, #bluetooth {
-    border-top: 5px solid #657b83;
+#battery,
+#pulseaudio,
+#network,
+#bluetooth {
+    border-top: 5px solid #ff9f00; /* DOOM-Horizon orange */
 }
 
 #clock {
-    background-color: lightslategrey;
+    background-color: #303040; /* DOOM-Horizon dark blue */
     border-top: 5px solid #1e1e3f;
-    color:whitesmoke;
+    color: #a0a0a0; /* DOOM-Horizon light blue */
     text-shadow: 2px 1px 2px #1e1e3f;
 }
 
 #workspaces {
-    text-shadow: 2px 1px 2px whitesmoke;
+    text-shadow: 2px 1px 2px #a0a0a0; /* DOOM-Horizon light blue */
 }
 
 #workspaces button {
-    color: #1e1e3f;
+    color: #a0a0a0; /* DOOM-Horizon light blue */
     text-shadow: 2px 1px 2px #1e1e3f;
 }
 
 #workspaces:hover {
-    background-color: lightslategrey;
+    background-color: #303040; /* DOOM-Horizon dark blue */
 }
+
 #workspaces button.visible {
-    color: #1e1e3f;
+    color: #a0a0a0; /* DOOM-Horizon light blue */
     border-top: 5px solid white;
 }
 
 #workspaces button.focused {
-    color: #1e1e3f;
+    color: #a0a0a0; /* DOOM-Horizon light blue */
     border-top: 5px solid #1e1e3f;
 }
 
 #workspaces button.urgent {
-    color: #1e1e3f;
+    color: #a0a0a0; /* DOOM-Horizon light blue */
     background-color: #1e1e3f;
 }
 
 #workspaces button.persistent {
-    color: #1e1e3f;
+    color: #a0a0a0; /* DOOM-Horizon light blue */
 }
 
 #workspaces button.current_output {
-    color: #1e1e3f;
-    border-top: 5px solid #657b83;
+    color: #a0a0a0; /* DOOM-Horizon light blue */
+    border-top: 5px solid #50C878; /* DOOM-Horizon orange */
 }

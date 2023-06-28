@@ -64,7 +64,7 @@
     "format-wifi": "   {essid} ({signalStrength}%) ",
     "format-ethernet": " {ifname}",
     "format-disconnected": "⚠ Disconnected",
-    "on-click": "iwgtk"
+    "on-click": "alacritty -e nmtui"
   },
 
   "pulseaudio": {

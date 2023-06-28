@@ -34,9 +34,9 @@ bar {
 # Floating windows:
 set $opacity 0.9
 for_window [app_id="pavucontrol"] floating enable; opacity $opacity
-for_window [app_id="karlender"] floating enable; opacity $opacity
+for_window [app_id="codes.loers.Karlender"] floating enable; opacity $opacity
 for_window [app_id="blueberry"] floating enable; opacity $opacity
-for_window [app_id="iwgtk"] floating enable; opacity $opacity
+for_window [app_id="alacritty -c nmtui"] floating enable; opacity $opacity
 for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
 
 # FN Keys:
@@ -91,8 +91,8 @@ bindgesture swipe:up exec $term
 output * bg "$HOME/.local/share/wallpapers/wallpaper1.jpg" fill
 
 # Monitor Management:
-output eDP1 pos 2560 1440 res 2560x1600
-output DP-5 pos 0 0 res 2560x1440
+output eDP1 pos 0 0 res 1920x1200
+output HDMI-A-1 pos 1920 0 res 2560x1440
 output DP-6 pos 2560 0 res 2560x1440
 
 bindsym $mod+d exec wdisplays
