@@ -50,10 +50,6 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
 bindsym XF86AudioLowerVolume exec amixer set Master 3%-
 bindsym XF86AudioMute exec amixer set Master toggle
 
-include ~/.config/sway/conf.d/*
-
-
-
 # Screenshots:
 
 # Current display to clipboard:
@@ -91,7 +87,7 @@ bindgesture swipe:up exec $term
 output * bg "$HOME/.local/share/wallpapers/wallpaper1.jpg" fill
 
 # Monitor Management:
-output eDP1 pos 0 0 res 1920x1200
+output eDP-1 pos 0 0 res 1920x1200
 output HDMI-A-1 pos 1920 0 res 2560x1440
 output DP-6 pos 2560 0 res 2560x1440
 
@@ -153,7 +149,7 @@ mode "$mode_system" {
     bindsym $mod+Shift+a exec pavucontrol
 
     # Open Browser:
-    bindsym $mod+Shift+Return exec google-chrome-stable
+    bindsym $mod+Shift+Return exec google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland
 
     # Open Nautilus:
     bindsym $mod+shift+n exec

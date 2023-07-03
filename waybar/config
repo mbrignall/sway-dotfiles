@@ -9,7 +9,7 @@
   "modules-right": ["bluetooth", "network", "battery", "custom/cpu_speed", "pulseaudio", "clock"],
 
   "sway/mode": {
-    "format": " {}"
+    "format": "  {}"
   },
 
   "sway/workspaces": {
@@ -36,19 +36,19 @@
   "custom/cpu_speed": {
     "interval": 10,
     "return-type": "json",
-    "exec": "/home/mbrignall/.config/waybar/modules/cpu_speed.sh",
-    "format": " {icon} {} ",
+    "exec": "/home/mbrignall/sway-dotfiles/waybar/modules/cpu_speed.sh",
+    "format": " <span color=\"#27d797\">{icon}</span> {} ",
     "format-icons": [""],
     "escape": true,
     "on-click": "alacritty -e htop"
   },
 
   "battery": {
-    "format": " {icon}  {capacity}% {time} ",
+    "format": " <span color=\"#ff9f00\">{icon}</span>  {capacity}% {time} ",
     "format-icons": ["  ", "  ", "  ", "  ", "  "],
     "format-time": "{H}h{M}m",
     "format-charging": "   {icon}  {capacity}% {time} ",
-    "format-full": "   {icon}  Charged ",
+    "format-full": "  <span color=\"#27d797\">{icon}</span>  Charged ",
     "interval": 30,
     "states": {
       "warning": 15,
@@ -61,7 +61,7 @@
     "format": " {icon} ",
     "format-alt": " {ipaddr}/{cidr} {icon} ",
     "format-alt-click": "click-right",
-    "format-wifi": "   {essid} ({signalStrength}%) ",
+    "format-wifi": " <span color=\"#27d797\"> </span> {essid} ({signalStrength}%) ",
     "format-ethernet": " {ifname}",
     "format-disconnected": "⚠ Disconnected",
     "on-click": "alacritty -e nmtui"

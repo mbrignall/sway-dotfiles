@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cur_freq="/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq"
 

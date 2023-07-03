@@ -21,12 +21,20 @@
 #battery {
     border-top: 5px solid #b877db;
 }
+
+#battery.critical {
+    color: #f53c3c;
+    padding: 0px 4px;
+}
+
 #pulseaudio {
     border-top: 5px solid  #87ceeb;
 }
+
 #network {
     border-top: 5px solid #27d797;
 }
+
 #bluetooth {
     border-top: 5px solid #ff9f00;
 }
@@ -35,8 +43,13 @@
     background-color: #303040;
     border-top: 5px solid #50C878;
     color: #a0a0a0;
-    text-shadow: 2px 1px 2px #1e1e3f;
+    text-shadow: 2px 1px 2px #50C878;
 }
+
+#custom-cpu_speed {
+    border-top: 5px solid #ff9f00;
+}
+
 
 #workspaces {
     text-shadow: 2px 1px 2px #a0a0a0;
