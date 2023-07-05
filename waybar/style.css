@@ -3,7 +3,7 @@
 * {
     border-radius: 0;
     font-family: "FiraMono Nerd Font";
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     padding: 0;
     margin: 0;
@@ -13,43 +13,20 @@
 }
 
 #waybar {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #303040;
     border: none;
     box-shadow: none;
 }
 
-#battery {
-    border-top: 5px solid #b877db;
-}
-
 #battery.critical {
+    border-top: 5px solid #f53c3c;
     color: #f53c3c;
     padding: 0px 4px;
 }
 
-#pulseaudio {
-    border-top: 5px solid  #87ceeb;
+#backlight, #battery, #bluetooth, #clock, #network, #pulseaudio {
+    border-top: 5px solid #b877db;
 }
-
-#network {
-    border-top: 5px solid #27d797;
-}
-
-#bluetooth {
-    border-top: 5px solid #ff9f00;
-}
-
-#clock {
-    background-color: #303040;
-    border-top: 5px solid #50C878;
-    color: #a0a0a0;
-    text-shadow: 2px 1px 2px #50C878;
-}
-
-#custom-cpu_speed {
-    border-top: 5px solid #ff9f00;
-}
-
 
 #workspaces {
     text-shadow: 2px 1px 2px #a0a0a0;
@@ -62,6 +39,7 @@
 
 #workspaces:hover {
     background-color: #303040;
+    border-top: 5px solid #b877db;
 }
 
 #workspaces button.visible {
@@ -76,11 +54,13 @@
 
 #workspaces button.urgent {
     color: #6c6f93;
-    background-color: #1e1e3f;
+    background-color: #a0a0a0;
+    border-top: 5px solid #b877db;
 }
 
 #workspaces button.persistent {
     color: #50C878;
+    border-top: 5px solid #b877db;
 }
 
 #workspaces button.current_output {

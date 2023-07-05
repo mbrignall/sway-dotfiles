@@ -42,8 +42,9 @@ for_window [app_id="wdisplay"] floating enable; floating_minimum_size 1050 x 750
 # FN Keys:
 
 # Brightnessctl:
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
-bindsym XF86MonBrightnessUp exec brightnessctl set +5% && notify-send "Backlight is $(printf '%.0f' $(brightnessctl g))"
+bindsym XF86MonBrightnessDown exec --no-startup-id "$HOME/sway-dotfiles/waybar/modules/brightness.sh down"
+bindsym XF86MonBrightnessUp exec --no-startup-id "$HOME/sway-dotfiles/waybar/modules/brightness.sh up"
+
 
 # Volume up/down/mute:
 bindsym XF86AudioRaiseVolume exec amixer set Master 3%+
