@@ -3,7 +3,7 @@
 * {
     border-radius: 0;
     font-family: "FiraMono Nerd Font";
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     padding: 0;
     margin: 0;
@@ -13,9 +13,14 @@
 }
 
 #waybar {
-    background-color: #303040;
+    background-color: rgba(76, 175, 80, 0.0);
     border: none;
     box-shadow: none;
+}
+
+window#waybar {
+  padding: 0;
+  margin: 0;
 }
 
 #battery.critical {
@@ -24,8 +29,21 @@
     padding: 0px 4px;
 }
 
-#backlight, #battery, #bluetooth, #clock, #network, #pulseaudio {
+#backlight, #battery, #bluetooth, #clock, #idle_inhibitor, #network, #pulseaudio {
     border-top: 5px solid #b877db;
+}
+
+#window {
+    font-weight: bold;
+    color: black;
+    background-color: #b877db;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#waybar.empty #window {
+    background: none;
 }
 
 #workspaces {
@@ -35,6 +53,7 @@
 #workspaces button {
     color: #50C878;
     text-shadow: 2px 1px 2px #1e1e3f;
+    border-top: 5px solid #b877db;
 }
 
 #workspaces:hover {

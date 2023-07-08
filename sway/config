@@ -31,6 +31,16 @@ bar {
 
 }
 
+# Window borders
+default_border pixel 1
+default_floating_border normal
+hide_edge_borders smart
+
+gaps inner 6
+gaps outer 6
+hide_edge_borders smart
+smart_gaps on
+
 # Floating windows:
 set $opacity 0.9
 for_window [app_id="pavucontrol"] floating enable; opacity $opacity
@@ -89,8 +99,8 @@ output * bg "$HOME/.local/share/wallpapers/wallpaper1.jpg" fill
 
 # Monitor Management:
 output eDP-1 pos 0 0 res 1920x1200
-output HDMI-A-1 pos 1920 0 res 2560x1440
-output DP-6 pos 2560 0 res 2560x1440
+output DP-7 pos 1920 0 res 2560x1440
+output DP-8 pos 4480 0 res 2560x1440
 
 bindsym $mod+d exec wdisplays
 

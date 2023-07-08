@@ -1,12 +1,36 @@
 {
+
   "layer": "top",
   "position": "top",
   "mode": "dock",
   "gtk-layer-shell": true,
-  "panel-size": 30,
-  "modules-left": [ "sway/workspaces", "sway/mode" ],
-  "modules-center": [ "sway/window" ],
-  "modules-right": [ "clock", "network", "battery", "custom/weather", "pulseaudio", "backlight", "bluetooth" ],
+  "height": 20,
+
+  "margin-top": 0,
+  "margin-left": 4,
+  "margin-right": 4,
+  "margin-bottom": 0,
+
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+
+  "modules-center": [
+    "sway/window"
+  ],
+
+  "modules-right": [
+    "clock",
+    "network",
+    "battery",
+    "custom/weather",
+    "pulseaudio",
+    "backlight",
+    "bluetooth",
+    "idle_inhibitor"
+  ],
+
 
   "sway/mode": {
     "format": "  {}"
@@ -17,11 +41,11 @@
     "all-outputs": true,
     "format": "{name} {icon}",
     "format-icons": {
-      "1":"▲",
-      "2":"▼",
-      "3":"◆",
-      "4":"◇",
-      "5":"■",
+      "1":"●",
+      "2":"●",
+      "3":"●",
+      "4":"●",
+      "5":"●",
       "urgent":"!",
       "focused":"●",
       "default":"○"
@@ -49,10 +73,18 @@
   },
 
   "backlight": {
-    "format": " <span color=\"#FADB5F\">{icon}</span> {percent}% ",
+    "format": " <span color=\"#FADB5F\">{icon}</span>  {percent}% ",
     "format-icons": ["󰃞", "󰃟", "󰃠"],
     "on-scroll-up": "bash $HOME/sway-dotfiles/waybar/modules/brightness.sh up",
     "on-scroll-down": "bash $HOME/sway-dotfiles/waybar/modules/brightness.sh down"
+  },
+
+  "idle_inhibitor": {
+	  "format": "{icon}",
+	  "format-icons": {
+	    "activated": " <span color=\"#27d797\"> </span> ",
+	    "deactivated": " <span color=\"#f53c3c\"> </span> "
+	  }
   },
 
   "network": {
@@ -102,8 +134,8 @@
   },
 
   "sway/window": {
-               "format": "{}",
-               "max-length": 50
+    "format": "{app_id}",
+    "max-length": 50
   },
 
   "wlr/taskbar": {
