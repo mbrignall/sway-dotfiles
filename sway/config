@@ -99,7 +99,7 @@ output * bg "$HOME/.local/share/wallpapers/wallpaper1.jpg" fill
 
 # Monitor Management:
 output eDP-1 pos 0 0 res 1920x1200
-output DP-7 pos 1920 0 res 2560x1440
+output HDMI-A-1 pos 1920 0 res 2560x1440
 output DP-8 pos 4480 0 res 2560x1440
 
 bindsym $mod+d exec wdisplays
